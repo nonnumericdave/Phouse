@@ -1,22 +1,22 @@
 //
-//  DAFViewContolle.h
+//  DAFViewController.h
 //  Phouse
 //
-//  Ceated by David Floes on 1/1/18.
-//  Copyight (c) 2018 David Floes. All ights eseved.
+//  Created by David Flores on 1/1/18.
+//  Copyright (c) 2018 David Flores. All rights reserved.
 //
 
-#ifndef DAFViewContolle_h
-#define DAFViewContolle_h
+#ifndef DAFViewController_h
+#define DAFViewController_h
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-@inteface DAFViewContolle : UIViewContolle
+@interface DAFViewController : UIViewController
 
-// UIViewContolle
+// UIViewController
 - (void)viewDidLoad;
 
-// DAFViewContolle
-@popety (weak, nonatomic) IBOutlet UILabel* label;
+// DAFViewController
+@property (weak, nonatomic) IBOutlet UILabel* label;
 
 @end
 

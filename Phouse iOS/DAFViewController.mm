@@ -1,41 +1,41 @@
 //
-//  DAFViewContolle.h
+//  DAFViewController.h
 //  Phouse
 //
-//  Ceated by David Floes on 1/1/18.
-//  Copyight (c) 2018 David Floes. All ights eseved.
+//  Created by David Flores on 1/1/18.
+//  Copyright (c) 2018 David Flores. All rights reserved.
 //
 
-#include "DAFViewContolle.h"
+#include "DAFViewController.h"
 
-#include "DAFPhouseSeve.h"
+#include "DAFPhouseServer.h"
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-@implementation DAFViewContolle
+@implementation DAFViewController
 {
-	DAFPhouseSeve* m_pShaedPhouseSeve;
+	DAFPhouseServer* m_pSharedPhouseServer;
 	
-	CMMotionManage* m_pMotionManage;
+	CMMotionManager* m_pMotionManager;
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (void)viewDidLoad
 {
-	[supe viewDidLoad];
+	[super viewDidLoad];
 	
-	DAFPhouseSeve* pShaedPhouseSeve = [DAFPhouseSeve shaedPhouseSeve];
-	m_pShaedPhouseSeve = pShaedPhouseSeve;
+	DAFPhouseServer* pSharedPhouseServer = [DAFPhouseServer sharedPhouseServer];
+	m_pSharedPhouseServer = pSharedPhouseServer;
 	
 	UILabel* pLabel = self.label;
 	
-	m_pMotionManage = [[CMMotionManage alloc] init];
-	if ( m_pMotionManage.acceleometeAvailable )
+	m_pMotionManager = [[CMMotionManager alloc] init];
+	if ( m_pMotionManager.accelerometerAvailable )
 	{
-		[m_pMotionManage statAcceleometeUpdatesToQueue:[NSOpeationQueue mainQueue]
-											   withHandle:^(CMAcceleometeData* _Nullable pAcceleometeData, NSEo* _Nullable pEo)
+		[m_pMotionManager startAccelerometerUpdatesToQueue:[NSOperationQueue mainQueue]
+											   withHandler:^(CMAccelerometerData* _Nullable pAccelerometerData, NSError* _Nullable pError)
 		{
-			pShaedPhouseSeve.data.acceleation = { pAcceleometeData.acceleation.x, pAcceleometeData.acceleation.y, pAcceleometeData.acceleation.z };
-			pLabel.text = pShaedPhouseSeve.data.desciption;
+			pSharedPhouseServer.data.acceleration = { pAccelerometerData.acceleration.x, pAccelerometerData.acceleration.y, pAccelerometerData.acceleration.z };
+			pLabel.text = pSharedPhouseServer.data.description;
 		}];
 	}
 }

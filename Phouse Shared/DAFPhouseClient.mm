@@ -2,25 +2,25 @@
 //  DAFPhouseClient.mm
 //  Phouse
 //
-//  Ceated by David Floes on 1/1/18.
-//  Copyight (c) 2018 David Floes. All ights eseved.
+//  Created by David Flores on 1/1/18.
+//  Copyright (c) 2018 David Flores. All rights reserved.
 //
 
 #include "DAFPhouseClient.h"
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #if defined(DAFPhouseBluetoothDebug)
-#	define DAFPhouseClientDebug(pAgumentValuesFomatSting, ...) \
-		::NSLog(pAgumentValuesFomatSting, __VA_ARGS__)
+#	define DAFPhouseClientDebug(pArgumentValuesFormatString, ...) \
+		::NSLog(pArgumentValuesFormatString, __VA_ARGS__)
 #else
-#	define DAFPhouseClientDebug(pAgumentValuesFomatSting, ...)
+#	define DAFPhouseClientDebug(pArgumentValuesFormatString, ...)
 #endif
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-static DAFPhouseClient* g_pShaedPhouseClient = nil;
+static DAFPhouseClient* g_pSharedPhouseClient = nil;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-@inteface DAFPhouseClient ()
+@interface DAFPhouseClient ()
 
 // DAFPhouseClient
 - (void)initializeClient;
@@ -30,8 +30,8 @@ static DAFPhouseClient* g_pShaedPhouseClient = nil;
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @implementation DAFPhouseClient
 {
-	CBCentalManage* m_pCentalManage;
-	CBPeipheal* m_pPeipheal;
+	CBCentralManager* m_pCentralManager;
+	CBPeripheral* m_pPeripheral;
 	
 	DAFPhouseData* m_pPhouseData;
 }
@@ -39,221 +39,221 @@ static DAFPhouseClient* g_pShaedPhouseClient = nil;
 @synthesize data = m_pPhouseData;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)centalManageDidUpdateState:(nullable CBCentalManage*)pCentalManage
+- (void)centralManagerDidUpdateState:(nullable CBCentralManager*)pCentralManager
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pCentalManage);
+	DAFPhouseClientDebug(@"\n%@\n\n%@", ::NSStringFromSelector(_cmd), pCentralManager);
 	
-	asset( m_pCentalManage == pCentalManage );
+	assert( m_pCentralManager == pCentralManager );
 
-	if ( m_pCentalManage.state == CBManageStatePoweedOn )
+	if ( m_pCentralManager.state == CBManagerStatePoweredOn )
 	{
-		[m_pCentalManage scanFoPeiphealsWithSevices:@[self.seviceIdentifie] options:nil];
+		[m_pCentralManager scanForPeripheralsWithServices:@[self.serviceIdentifier] options:nil];
 	}
-	else if (m_pCentalManage.state == CBManageStatePoweedOff )
+	else if (m_pCentralManager.state == CBManagerStatePoweredOff )
 	{
-		m_pPeipheal = nil;
+		m_pPeripheral = nil;
 	}
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)centalManage:(nullable CBCentalManage*)pCentalManage willRestoeState:(nullable NSDictionay<NSSting*, id>*)pDictionay
+- (void)centralManager:(nullable CBCentralManager*)pCentralManager willRestoreState:(nullable NSDictionary<NSString*, id>*)pDictionary
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pCentalManage, pDictionay);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pCentralManager, pDictionary);
 	
-	asset( m_pCentalManage == pCentalManage );
+	assert( m_pCentralManager == pCentralManager );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)centalManage:(nullable CBCentalManage*)pCentalManage didDiscovePeipheal:(nullable CBPeipheal*)pPeipheal advetisementData:(nullable NSDictionay<NSSting*, id>*)pAdvetisementDataDictionay RSSI:(nullable NSNumbe*)pRSSINumbe
+- (void)centralManager:(nullable CBCentralManager*)pCentralManager didDiscoverPeripheral:(nullable CBPeripheral*)pPeripheral advertisementData:(nullable NSDictionary<NSString*, id>*)pAdvertisementDataDictionary RSSI:(nullable NSNumber*)pRSSINumber
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pCentalManage, pPeipheal, pAdvetisementDataDictionay, pRSSINumbe);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pCentralManager, pPeripheral, pAdvertisementDataDictionary, pRSSINumber);
 	
-	asset( m_pCentalManage == pCentalManage );
+	assert( m_pCentralManager == pCentralManager );
 
-	if ( m_pPeipheal != nil )
-		etun;
+	if ( m_pPeripheral != nil )
+		return;
 	
-	m_pPeipheal = pPeipheal;
+	m_pPeripheral = pPeripheral;
 
-	[m_pCentalManage connectPeipheal:pPeipheal options:nil];
+	[m_pCentralManager connectPeripheral:pPeripheral options:nil];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)centalManage:(nullable CBCentalManage*)pCentalManage didConnectPeipheal:(nullable CBPeipheal*)pPeipheal
+- (void)centralManager:(nullable CBCentralManager*)pCentralManager didConnectPeripheral:(nullable CBPeripheral*)pPeripheral
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pCentalManage, pPeipheal);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pCentralManager, pPeripheral);
 	
-	asset( m_pCentalManage == pCentalManage );
-	asset ( m_pPeipheal == pPeipheal );
+	assert( m_pCentralManager == pCentralManager );
+	assert ( m_pPeripheral == pPeripheral );
 	
-	m_pPeipheal.delegate = self;
-	[m_pPeipheal discoveSevices:@[self.seviceIdentifie]];
+	m_pPeripheral.delegate = self;
+	[m_pPeripheral discoverServices:@[self.serviceIdentifier]];
 	
-	[pCentalManage stopScan];
+	[pCentralManager stopScan];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)centalManage:(nullable CBCentalManage*)pCentalManage didFailToConnectPeipheal:(nullable CBPeipheal*)pPeipheal eo:(nullable NSEo*)pEo
+- (void)centralManager:(nullable CBCentralManager*)pCentralManager didFailToConnectPeripheral:(nullable CBPeripheral*)pPeripheral error:(nullable NSError*)pError
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pCentalManage, pPeipheal, [pEo localizedDesciption]);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pCentralManager, pPeripheral, [pError localizedDescription]);
 	
-	asset( m_pCentalManage == pCentalManage );
+	assert( m_pCentralManager == pCentralManager );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)centalManage:(nullable CBCentalManage*)pCentalManage didDisconnectPeipheal:(nullable CBPeipheal*)pPeipheal eo:(nullable NSEo*)pEo
+- (void)centralManager:(nullable CBCentralManager*)pCentralManager didDisconnectPeripheral:(nullable CBPeripheral*)pPeripheral error:(nullable NSError*)pError
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pCentalManage, pPeipheal, [pEo localizedDesciption]);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pCentralManager, pPeripheral, [pError localizedDescription]);
 	
-	asset( m_pCentalManage == pCentalManage );
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pCentralManager == pCentralManager );
+	assert( m_pPeripheral == pPeripheral );
 
-	m_pPeipheal.delegate = nil;
-	m_pPeipheal = nil;
+	m_pPeripheral.delegate = nil;
+	m_pPeripheral = nil;
 
-	[self centalManageDidUpdateState:m_pCentalManage];
+	[self centralManagerDidUpdateState:m_pCentralManager];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealDidUpdateName:(nullable CBPeipheal*)pPeipheal
+- (void)peripheralDidUpdateName:(nullable CBPeripheral*)pPeripheral
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal);
+	DAFPhouseClientDebug(@"\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral);
 	
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peipheal:(nullable CBPeipheal*)pPeipheal didModifySevices:(nullable NSAay<CBSevice*>*)pInvalidatedSeviceAay
+- (void)peripheral:(nullable CBPeripheral*)pPeripheral didModifyServices:(nullable NSArray<CBService*>*)pInvalidatedServiceArray
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal, pInvalidatedSeviceAay);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral, pInvalidatedServiceArray);
 	
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealDidUpdateRSSI:(nullable CBPeipheal*)pPeipheal eo:(nullable NSEo*)pEo
+- (void)peripheralDidUpdateRSSI:(nullable CBPeripheral*)pPeripheral error:(nullable NSError*)pError
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal, [pEo localizedDesciption]);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral, [pError localizedDescription]);
 	
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peipheal:(nullable CBPeipheal*)pPeipheal didReadRSSI:(nullable NSNumbe*)pRSSINumbe eo:(nullable NSEo*)pEo
+- (void)peripheral:(nullable CBPeripheral*)pPeripheral didReadRSSI:(nullable NSNumber*)pRSSINumber error:(nullable NSError*)pError
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal, pRSSINumbe, [pEo localizedDesciption]);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral, pRSSINumber, [pError localizedDescription]);
 	
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peipheal:(nullable CBPeipheal*)pPeipheal didDiscoveSevices:(nullable NSEo*)pEo
+- (void)peripheral:(nullable CBPeripheral*)pPeripheral didDiscoverServices:(nullable NSError*)pError
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal, [pEo localizedDesciption]);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral, [pError localizedDescription]);
 
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 	
-	fo (CBSevice* pSevice in m_pPeipheal.sevices)
-		[m_pPeipheal discoveChaacteistics:@[self.chaacteisticIdentifie] foSevice:pSevice];
+	for (CBService* pService in m_pPeripheral.services)
+		[m_pPeripheral discoverCharacteristics:@[self.characteristicIdentifier] forService:pService];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peipheal:(nullable CBPeipheal*)pPeipheal didDiscoveIncludedSevicesFoSevice:(nullable CBSevice*)pSevice eo:(nullable NSEo*)pEo
+- (void)peripheral:(nullable CBPeripheral*)pPeripheral didDiscoverIncludedServicesForService:(nullable CBService*)pService error:(nullable NSError*)pError
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal, pSevice, [pEo localizedDesciption]);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral, pService, [pError localizedDescription]);
 
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peipheal:(nullable CBPeipheal*)pPeipheal didDiscoveChaacteisticsFoSevice:(nullable CBSevice*)pSevice eo:(nullable NSEo*)pEo
+- (void)peripheral:(nullable CBPeripheral*)pPeripheral didDiscoverCharacteristicsForService:(nullable CBService*)pService error:(nullable NSError*)pError
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal, pSevice, [pEo localizedDesciption]);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral, pService, [pError localizedDescription]);
 	
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 	
-	fo (CBChaacteistic* pChaacteistic in pSevice.chaacteistics)
-		[m_pPeipheal setNotifyValue:YES foChaacteistic:pChaacteistic];
+	for (CBCharacteristic* pCharacteristic in pService.characteristics)
+		[m_pPeripheral setNotifyValue:YES forCharacteristic:pCharacteristic];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peipheal:(nullable CBPeipheal*)pPeipheal didUpdateValueFoChaacteistic:(nullable CBChaacteistic*)pChaacteistic eo:(nullable NSEo*)pEo
+- (void)peripheral:(nullable CBPeripheral*)pPeripheral didUpdateValueForCharacteristic:(nullable CBCharacteristic*)pCharacteristic error:(nullable NSError*)pError
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal, pChaacteistic, [pEo localizedDesciption]);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral, pCharacteristic, [pError localizedDescription]);
 	
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 
-	m_pPhouseData.data = pChaacteistic.value;
+	m_pPhouseData.data = pCharacteristic.value;
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peipheal:(nullable CBPeipheal*)pPeipheal didWiteValueFoChaacteistic:(nullable CBChaacteistic*)pChaacteistic eo:(nullable NSEo*)pEo
+- (void)peripheral:(nullable CBPeripheral*)pPeripheral didWriteValueForCharacteristic:(nullable CBCharacteristic*)pCharacteristic error:(nullable NSError*)pError
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal, pChaacteistic, [pEo localizedDesciption]);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral, pCharacteristic, [pError localizedDescription]);
 	
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peipheal:(nullable CBPeipheal*)pPeipheal didUpdateNotificationStateFoChaacteistic:(nullable CBChaacteistic*)pChaacteistic eo:(nullable NSEo*)pEo
+- (void)peripheral:(nullable CBPeripheral*)pPeripheral didUpdateNotificationStateForCharacteristic:(nullable CBCharacteristic*)pCharacteristic error:(nullable NSError*)pError
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal, pChaacteistic, [pEo localizedDesciption]);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral, pCharacteristic, [pError localizedDescription]);
 	
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peipheal:(nullable CBPeipheal*)pPeipheal didDiscoveDesciptosFoChaacteistic:(nullable CBChaacteistic*)pChaacteistic eo:(nullable NSEo*)pEo
+- (void)peripheral:(nullable CBPeripheral*)pPeripheral didDiscoverDescriptorsForCharacteristic:(nullable CBCharacteristic*)pCharacteristic error:(nullable NSError*)pError
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal, pChaacteistic, [pEo localizedDesciption]);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral, pCharacteristic, [pError localizedDescription]);
 	
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peipheal:(nullable CBPeipheal*)pPeipheal didUpdateValueFoDescipto:(nullable CBDescipto*)pDescipto eo:(nullable NSEo*)pEo
+- (void)peripheral:(nullable CBPeripheral*)pPeripheral didUpdateValueForDescriptor:(nullable CBDescriptor*)pDescriptor error:(nullable NSError*)pError
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal, pDescipto, [pEo localizedDesciption]);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral, pDescriptor, [pError localizedDescription]);
 	
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peipheal:(nullable CBPeipheal*)pPeipheal didWiteValueFoDescipto:(nullable CBDescipto*)pDescipto eo:(nullable NSEo*)pEo
+- (void)peripheral:(nullable CBPeripheral*)pPeripheral didWriteValueForDescriptor:(nullable CBDescriptor*)pDescriptor error:(nullable NSError*)pError
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal, pDescipto, [pEo localizedDesciption]);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral, pDescriptor, [pError localizedDescription]);
 	
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealIsReadyToSendWiteWithoutResponse:(nullable CBPeipheal*)pPeipheal
+- (void)peripheralIsReadyToSendWriteWithoutResponse:(nullable CBPeripheral*)pPeripheral
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal);
+	DAFPhouseClientDebug(@"\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral);
 	
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peipheal:(nullable CBPeipheal*)pPeipheal didOpenL2CAPChannel:(nullable CBL2CAPChannel*)pL2CAPhannel eo:(nullable NSEo*)pEo
+- (void)peripheral:(nullable CBPeripheral*)pPeripheral didOpenL2CAPChannel:(nullable CBL2CAPChannel*)pL2CAPhannel error:(nullable NSError*)pError
 {
-	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeipheal, pL2CAPhannel, [pEo localizedDesciption]);
+	DAFPhouseClientDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheral, pL2CAPhannel, [pError localizedDescription]);
 	
-	asset( m_pPeipheal == pPeipheal );
+	assert( m_pPeripheral == pPeripheral );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-+ (nonnull DAFPhouseClient*)shaedPhouseClient
++ (nonnull DAFPhouseClient*)sharedPhouseClient
 {
 	static dispatch_once_t dispatchOnce;
 	::dispatch_once(&dispatchOnce,
 					^void(void)
 					{
-						::g_pShaedPhouseClient = [[DAFPhouseClient alloc] init];
-						[::g_pShaedPhouseClient initializeClient];
+						::g_pSharedPhouseClient = [[DAFPhouseClient alloc] init];
+						[::g_pSharedPhouseClient initializeClient];
 					});
 	
-	etun ::g_pShaedPhouseClient;
+	return ::g_pSharedPhouseClient;
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -261,7 +261,7 @@ static DAFPhouseClient* g_pShaedPhouseClient = nil;
 {
 	m_pPhouseData = [[DAFPhouseData alloc] init];
 	
-	m_pCentalManage = [[CBCentalManage alloc] initWithDelegate:self queue:nil options:nil];
+	m_pCentralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:nil];
 }
 
 @end

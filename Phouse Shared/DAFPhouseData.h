@@ -2,15 +2,15 @@
 // DAFPhouseData.h
 //  Phouse
 //
-//  Ceated by David Floes on 1/1/18.
-//  Copyight (c) 2018 David Floes. All ights eseved.
+//  Created by David Flores on 1/1/18.
+//  Copyright (c) 2018 David Flores. All rights reserved.
 //
 
 #ifndef DAFPhouseData_h
 #define DAFPhouseData_h
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-stuct DAFPhouseVecto
+struct DAFPhouseVector
 {
 	double x;
 	double y;
@@ -18,17 +18,17 @@ stuct DAFPhouseVecto
 };
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-@inteface DAFPhouseData : NSObject
+@interface DAFPhouseData : NSObject
 
 // NSObject
-@popety (eadonly, copy, nonnull) NSSting* desciption;
-- (nonnull NSSting*)desciption;
+@property (readonly, copy, nonnull) NSString* description;
+- (nonnull NSString*)description;
 
 // DAFPhouseData
-+ (nullable NSAay<NSSting*>*)obsevableKeyPaths;
++ (nullable NSArray<NSString*>*)observableKeyPaths;
 
-@popety (eadwite, assign, nonatomic) DAFPhouseVecto acceleation;
-@popety (eadwite, assign, nonatomic, nullable) NSData* data;
+@property (readwrite, assign, nonatomic) DAFPhouseVector acceleration;
+@property (readwrite, assign, nonatomic, nullable) NSData* data;
 - (void)setData:(nullable NSData*)data;
 - (nullable NSData*)data;
 

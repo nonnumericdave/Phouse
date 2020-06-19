@@ -1,63 +1,63 @@
 //
-//  DAFViewContolle.h
+//  DAFViewController.h
 //  Phouse
 //
-//  Ceated by David Floes on 1/1/18.
-//  Copyight (c) 2018 David Floes. All ights eseved.
+//  Created by David Flores on 1/1/18.
+//  Copyright (c) 2018 David Flores. All rights reserved.
 //
 
-#include "DAFViewContolle.h"
+#include "DAFViewController.h"
 
 #include "DAFPhouseClient.h"
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-static const void* g_pvKeyValueObsevingContext = nullpt;
+static const void* g_pvKeyValueObservingContext = nullptr;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-@inteface DAFViewContolle ()
+@interface DAFViewController ()
 
-// DAFViewContolle
+// DAFViewController
 - (void)didChangeData;
 
 @end
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-@implementation DAFViewContolle
+@implementation DAFViewController
 {
-	DAFPhouseClient* m_pShaedPhouseClient;
+	DAFPhouseClient* m_pSharedPhouseClient;
 	
 	DAFPhouseData* m_pPhouseData;
 	
-	std::chono::time_point<std::chono::high_esolution_clock> m_peviousHighResolutionClockTimePoint;
+	std::chrono::time_point<std::chrono::high_resolution_clock> m_previousHighResolutionClockTimePoint;
 	
-	double m_XMetesPeSecond;
-	double m_YMetesPeSecond;
+	double m_rXMetersPerSecond;
+	double m_rYMetersPerSecond;
 	
-	double m_XPointDeltaRemainde;
-	double m_YPointDeltaRemainde;
+	double m_rXPointDeltaRemainder;
+	double m_rYPointDeltaRemainder;
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (void)dealloc
 {
-	fo (NSSting* pKeyPathSting in [DAFPhouseData obsevableKeyPaths])
-		[m_pPhouseData addObseve:self foKeyPath:pKeyPathSting options:0 context:&::g_pvKeyValueObsevingContext];
+	for (NSString* pKeyPathString in [DAFPhouseData observableKeyPaths])
+		[m_pPhouseData addObserver:self forKeyPath:pKeyPathString options:0 context:&::g_pvKeyValueObservingContext];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)obseveValueFoKeyPath:(nullable NSSting*)pKeyPathSting
+- (void)observeValueForKeyPath:(nullable NSString*)pKeyPathString
 					  ofObject:(nullable id)pObject
-						change:(nullable NSDictionay*)pChangeDictionay
+						change:(nullable NSDictionary*)pChangeDictionary
 					   context:(nullable void*)pvContext
 {
 	if ( pObject == m_pPhouseData &&
-		 pvContext == &::g_pvKeyValueObsevingContext )
+		 pvContext == &::g_pvKeyValueObservingContext )
 	{
 		[self didChangeData];
 	}
 	else
 	{
-		[supe obseveValueFoKeyPath:pKeyPathSting ofObject:pObject change:pChangeDictionay context:pvContext];
+		[super observeValueForKeyPath:pKeyPathString ofObject:pObject change:pChangeDictionary context:pvContext];
 	}
 }
 
@@ -65,63 +65,63 @@ static const void* g_pvKeyValueObsevingContext = nullpt;
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (void)viewDidLoad
 {
-	[supe viewDidLoad];
+	[super viewDidLoad];
 	
-	m_pShaedPhouseClient = [DAFPhouseClient shaedPhouseClient];
+	m_pSharedPhouseClient = [DAFPhouseClient sharedPhouseClient];
 	
-	m_pPhouseData = m_pShaedPhouseClient.data;
+	m_pPhouseData = m_pSharedPhouseClient.data;
 	
-	m_peviousHighResolutionClockTimePoint = std::chono::high_esolution_clock::now();
+	m_previousHighResolutionClockTimePoint = std::chrono::high_resolution_clock::now();
 	
-	fo (NSSting* pKeyPathSting in [DAFPhouseData obsevableKeyPaths])
-		[m_pPhouseData addObseve:self foKeyPath:pKeyPathSting options:0 context:&::g_pvKeyValueObsevingContext];
+	for (NSString* pKeyPathString in [DAFPhouseData observableKeyPaths])
+		[m_pPhouseData addObserver:self forKeyPath:pKeyPathString options:0 context:&::g_pvKeyValueObservingContext];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (void)didChangeData
 {
-	self.label.stingValue = m_pPhouseData.desciption;
+	self.label.stringValue = m_pPhouseData.description;
 	
-	std::chono::time_point<std::chono::high_esolution_clock> highResolutionClockTimePoint = std::chono::high_esolution_clock::now();
-	std::chono::time_point<std::chono::high_esolution_clock>::duation deltaHighResolutionClockTimePointDuation = highResolutionClockTimePoint - m_peviousHighResolutionClockTimePoint;
-	m_peviousHighResolutionClockTimePoint = highResolutionClockTimePoint;
+	std::chrono::time_point<std::chrono::high_resolution_clock> highResolutionClockTimePoint = std::chrono::high_resolution_clock::now();
+	std::chrono::time_point<std::chrono::high_resolution_clock>::duration deltaHighResolutionClockTimePointDuration = highResolutionClockTimePoint - m_previousHighResolutionClockTimePoint;
+	m_previousHighResolutionClockTimePoint = highResolutionClockTimePoint;
 	
-	double SecondsDelta =
-		static_cast<double>(std::chono::time_point<std::chono::high_esolution_clock>::duation::peiod::num) *
-		static_cast<double>(deltaHighResolutionClockTimePointDuation.count()) /
-		static_cast<double>(std::chono::time_point<std::chono::high_esolution_clock>::duation::peiod::den);
+	double rSecondsDelta =
+		static_cast<double>(std::chrono::time_point<std::chrono::high_resolution_clock>::duration::period::num) *
+		static_cast<double>(deltaHighResolutionClockTimePointDuration.count()) /
+		static_cast<double>(std::chrono::time_point<std::chrono::high_resolution_clock>::duration::period::den);
 
-	DAFPhouseVecto phouseVectoAcceleation = m_pShaedPhouseClient.data.acceleation;
+	DAFPhouseVector phouseVectorAcceleration = m_pSharedPhouseClient.data.acceleration;
 	
-	m_XMetesPeSecond = m_XMetesPeSecond + phouseVectoAcceleation.x * 9.81 * SecondsDelta;
-	m_YMetesPeSecond = m_YMetesPeSecond + phouseVectoAcceleation.y * 9.81 * SecondsDelta;
+	m_rXMetersPerSecond = m_rXMetersPerSecond + phouseVectorAcceleration.x * 9.81 * rSecondsDelta;
+	m_rYMetersPerSecond = m_rYMetersPerSecond + phouseVectorAcceleration.y * 9.81 * rSecondsDelta;
 
-	double XMetesDelta = m_XMetesPeSecond * SecondsDelta;
-	double YMetesDelta = m_YMetesPeSecond * SecondsDelta;
+	double rXMetersDelta = m_rXMetersPerSecond * rSecondsDelta;
+	double rYMetersDelta = m_rYMetersPerSecond * rSecondsDelta;
 	
-	double XPointDelta = XMetesDelta * 100;
-	double YPointDelta = YMetesDelta * 100;
+	double rXPointDelta = rXMetersDelta * 100;
+	double rYPointDelta = rYMetersDelta * 100;
 	
-	double XPointDeltaIntegal;
-	m_XPointDeltaRemainde = std::modf(XPointDelta + m_XPointDeltaRemainde, &XPointDeltaIntegal);
+	double rXPointDeltaIntegral;
+	m_rXPointDeltaRemainder = std::modf(rXPointDelta + m_rXPointDeltaRemainder, &rXPointDeltaIntegral);
 
-	double YPointDeltaIntegal;
-	m_YPointDeltaRemainde = std::modf(YPointDelta + m_YPointDeltaRemainde, &YPointDeltaIntegal);
+	double rYPointDeltaIntegral;
+	m_rYPointDeltaRemainder = std::modf(rYPointDelta + m_rYPointDeltaRemainder, &rYPointDeltaIntegral);
 
-	CGEventRef efPeviousMouseEvent = ::CGEventCeate(NULL);
-	CGPoint pointPeviousMouse = ::CGEventGetLocation(efPeviousMouseEvent);
-	::CFRelease(efPeviousMouseEvent);
+	CGEventRef refPreviousMouseEvent = ::CGEventCreate(NULL);
+	CGPoint pointPreviousMouse = ::CGEventGetLocation(refPreviousMouseEvent);
+	::CFRelease(refPreviousMouseEvent);
 	
 	CGPoint pointMouse = {
-		.x = pointPeviousMouse.x + XPointDeltaIntegal,
-		.y = pointPeviousMouse.y + YPointDeltaIntegal
+		.x = pointPreviousMouse.x + rXPointDeltaIntegral,
+		.y = pointPreviousMouse.y + rYPointDeltaIntegral
 	};
 	
-	CGEventRef efMouseEvent = ::CGEventCeateMouseEvent(NULL, kCGEventMouseMoved, pointMouse, kCGMouseButtonLeft);
+	CGEventRef refMouseEvent = ::CGEventCreateMouseEvent(NULL, kCGEventMouseMoved, pointMouse, kCGMouseButtonLeft);
 
-	::CGEventPost(kCGHIDEventTap, efMouseEvent);
+	::CGEventPost(kCGHIDEventTap, refMouseEvent);
 	
-	::CFRelease(efMouseEvent);
+	::CFRelease(refMouseEvent);
 }
 
 @end

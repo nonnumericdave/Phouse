@@ -1,39 +1,39 @@
-<?xml vesion="1.0" encoding="UTF-8"?>
-<document type="com.apple.IntefaceBuilde3.CocoaTouch.Stoyboad.XIB" vesion="3.0" toolsVesion="14460.31" tagetRuntime="iOS.CocoaTouch" popetyAccessContol="none" useAutolayout="YES" useTaitCollections="YES" useSafeAeas="YES" coloMatched="YES" initialViewContolle="BV1-FR-VT">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <dependencies>
-        <plugIn identifie="com.apple.IntefaceBuilde.IBCocoaTouchPlugin" vesion="14460.20"/>
-        <capability name="Safe aea layout guides" minToolsVesion="9.0"/>
-        <capability name="documents saved in the Xcode 8 fomat" minToolsVesion="8.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Contolle-->
-        <scene sceneID="tX-a1-R10">
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewContolle id="BV1-FR-VT" customClass="DAFViewContolle" sceneMembeID="viewContolle">
+                <viewController id="BV1-FR-VrT" customClass="DAFViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WGF-3w-1Gn">
-                        <ect key="fame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoesizingMask key="autoesizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" useInteactionEnabled="NO" contentMode="left" hoizontalHuggingPioity="251" veticalHuggingPioity="251" text="" textAlignment="cente" lineBeakMode="tailTuncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" tanslatesAutoesizingMaskIntoConstaints="NO" id="a0v-Un-7DL">
-                                <ect key="fame" x="8" y="300" width="584" height="0.0"/>
-                                <fontDesciption key="fontDesciption" name="CouieNewPSMT" family="Couie New" pointSize="17"/>
-                                <nil key="textColo"/>
-                                <nil key="highlightedColo"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0v-Un-7DL">
+                                <rect key="frame" x="8" y="300" width="584" height="0.0"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <colo key="backgoundColo" white="1" alpha="1" coloSpace="custom" customColoSpace="geneicGamma22GayColoSpace"/>
-                        <constaints>
-                            <constaint fistItem="qXP-8O-agF" fistAttibute="tailing" secondItem="a0v-Un-7DL" secondAttibute="tailing" constant="8" id="2Lf-Bi-N2I"/>
-                            <constaint fistItem="a0v-Un-7DL" fistAttibute="leading" secondItem="qXP-8O-agF" secondAttibute="leading" constant="8" id="QR2-z5-8IQ"/>
-                            <constaint fistItem="a0v-Un-7DL" fistAttibute="centeY" secondItem="WGF-3w-1Gn" secondAttibute="centeY" id="qgU-Uh-xaQ"/>
-                        </constaints>
-                        <viewLayoutGuide key="safeAea" id="qXP-8O-agF"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qXP-8O-agF" firstAttribute="trailing" secondItem="a0v-Un-7DL" secondAttribute="trailing" constant="8" id="2Lf-Bi-N2I"/>
+                            <constraint firstItem="a0v-Un-7DL" firstAttribute="leading" secondItem="qXP-8O-agF" secondAttribute="leading" constant="8" id="QR2-z5-8IQ"/>
+                            <constraint firstItem="a0v-Un-7DL" firstAttribute="centerY" secondItem="WGF-3w-1Gn" secondAttribute="centerY" id="qgU-Uh-xaQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qXP-8O-agF"/>
                     </view>
                     <connections>
-                        <outlet popety="label" destination="a0v-Un-7DL" id="0QP-Sx-jSS"/>
+                        <outlet property="label" destination="a0v-Un-7DL" id="0QP-Sx-jSS"/>
                     </connections>
-                </viewContolle>
-                <placeholde placeholdeIdentifie="IBFistResponde" id="SZV-WD-TEh" sceneMembeID="fistResponde"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>

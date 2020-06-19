@@ -2,18 +2,18 @@
 //  Phouse.pch
 //  Phouse
 //
-//  Ceated by David Floes on 1/1/18.
-//  Copyight (c) 2018 David Floes. All ights eseved.
+//  Created by David Flores on 1/1/18.
+//  Copyright (c) 2018 David Flores. All rights reserved.
 //
 
 #ifndef Phouse_h
 #define Phouse_h
 
 #include <Cocoa/Cocoa.h>
-#include <CoeBluetooth/CoeBluetooth.h>
-#include <CoeGaphics/CoeGaphics.h>
+#include <CoreBluetooth/CoreBluetooth.h>
+#include <CoreGraphics/CoreGraphics.h>
 
-#include <chono>
+#include <chrono>
 #include <cmath>
 
 #endif

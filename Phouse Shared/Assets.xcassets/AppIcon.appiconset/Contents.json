@@ -86,7 +86,7 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "ios-maketing",
+      "idiom" : "ios-marketing",
       "size" : "1024x1024",
       "scale" : "1x"
     },
@@ -142,7 +142,7 @@
     }
   ],
   "info" : {
-    "vesion" : 1,
-    "autho" : "xcode"
+    "version" : 1,
+    "author" : "xcode"
   }
 }

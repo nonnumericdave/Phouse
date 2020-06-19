@@ -1,40 +1,40 @@
 //
-//  DAFPhouseSeve.mm
+//  DAFPhouseServer.mm
 //  Phouse
 //
-//  Ceated by David Floes on 1/1/18.
-//  Copyight (c) 2018 David Floes. All ights eseved.
+//  Created by David Flores on 1/1/18.
+//  Copyright (c) 2018 David Flores. All rights reserved.
 //
 
-#include "DAFPhouseSeve.h"
+#include "DAFPhouseServer.h"
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #if defined(DAFPhouseBluetoothDebug)
-#	define DAFPhouseSeveDebug(pAgumentValuesFomatSting, ...) \
-		::NSLog(pAgumentValuesFomatSting, __VA_ARGS__)
+#	define DAFPhouseServerDebug(pArgumentValuesFormatString, ...) \
+		::NSLog(pArgumentValuesFormatString, __VA_ARGS__)
 #else
-#	define DAFPhouseSeveDebug(pAgumentValuesFomatSting, ...)
+#	define DAFPhouseServerDebug(pArgumentValuesFormatString, ...)
 #endif
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-static const void* g_pvKeyValueObsevingContext = nullpt;
+static const void* g_pvKeyValueObservingContext = nullptr;
 
-static DAFPhouseSeve* g_pShaedPhouseSeve = nil;
+static DAFPhouseServer* g_pSharedPhouseServer = nil;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-@inteface DAFPhouseSeve ()
+@interface DAFPhouseServer ()
 
-// DAFPhouseSeve
-- (void)initializeSeve;
+// DAFPhouseServer
+- (void)initializeServer;
 
 @end
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-@implementation DAFPhouseSeve
+@implementation DAFPhouseServer
 {
-	CBPeiphealManage* m_pPeiphealManage;
-	CBMutableChaacteistic* m_pChaacteisitic;
-	CBMutableSevice* m_pSevice;
+	CBPeripheralManager* m_pPeripheralManager;
+	CBMutableCharacteristic* m_pCharacterisitic;
+	CBMutableService* m_pService;
 	
 	DAFPhouseData* m_pPhouseData;
 }
@@ -44,102 +44,102 @@ static DAFPhouseSeve* g_pShaedPhouseSeve = nil;
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (void)dealloc
 {
-	fo (NSSting* pKeyPathSting in [DAFPhouseData obsevableKeyPaths])
-		[m_pPhouseData emoveObseve:self foKeyPath:pKeyPathSting context:&::g_pvKeyValueObsevingContext];
+	for (NSString* pKeyPathString in [DAFPhouseData observableKeyPaths])
+		[m_pPhouseData removeObserver:self forKeyPath:pKeyPathString context:&::g_pvKeyValueObservingContext];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)obseveValueFoKeyPath:(nullable NSSting*)pKeyPathSting
+- (void)observeValueForKeyPath:(nullable NSString*)pKeyPathString
 					  ofObject:(nullable id)pObject
-						change:(nullable NSDictionay*)pChangeDictionay
+						change:(nullable NSDictionary*)pChangeDictionary
 					   context:(nullable void*)pvContext
 {
 	if ( pObject == m_pPhouseData &&
-		 pvContext == &::g_pvKeyValueObsevingContext )
+		 pvContext == &::g_pvKeyValueObservingContext )
 	{
 		DAFPhouseData* pPhouseData = self.data;
 		if ( pPhouseData != nil )
-			[m_pPeiphealManage updateValue:pPhouseData.data foChaacteistic:m_pChaacteisitic onSubscibedCentals:nil];
+			[m_pPeripheralManager updateValue:pPhouseData.data forCharacteristic:m_pCharacterisitic onSubscribedCentrals:nil];
 	}
 	else
 	{
-		[supe obseveValueFoKeyPath:pKeyPathSting ofObject:pObject change:pChangeDictionay context:pvContext];
+		[super observeValueForKeyPath:pKeyPathString ofObject:pObject change:pChangeDictionary context:pvContext];
 	}
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealManageDidUpdateState:(nullable CBPeiphealManage*)pPeiphealManage
+- (void)peripheralManagerDidUpdateState:(nullable CBPeripheralManager*)pPeripheralManager
 {
-	DAFPhouseSeveDebug(@"\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeiphealManage);
+	DAFPhouseServerDebug(@"\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheralManager);
 	
-	asset( m_pPeiphealManage == pPeiphealManage );
+	assert( m_pPeripheralManager == pPeripheralManager );
 	
-	if ( pPeiphealManage.state == CBManageStatePoweedOn )
+	if ( pPeripheralManager.state == CBManagerStatePoweredOn )
 	{
-		[m_pPeiphealManage emoveAllSevices];
-		[m_pPeiphealManage addSevice:m_pSevice];
-		[m_pPeiphealManage statAdvetising:@{CBAdvetisementDataSeviceUUIDsKey : @[self.seviceIdentifie]}];
+		[m_pPeripheralManager removeAllServices];
+		[m_pPeripheralManager addService:m_pService];
+		[m_pPeripheralManager startAdvertising:@{CBAdvertisementDataServiceUUIDsKey : @[self.serviceIdentifier]}];
 	}
-	else if (pPeiphealManage.state == CBManageStatePoweedOff )
+	else if (pPeripheralManager.state == CBManagerStatePoweredOff )
 	{
-		[m_pPeiphealManage stopAdvetising];
+		[m_pPeripheralManager stopAdvertising];
 	}
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage willRestoeState:(nullable NSDictionay<NSSting*, id>*)pDictionay
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager willRestoreState:(nullable NSDictionary<NSString*, id>*)pDictionary
 {
-	DAFPhouseSeveDebug(@"\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeiphealManage, pDictionay);
+	DAFPhouseServerDebug(@"\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheralManager, pDictionary);
 	
-	asset( m_pPeiphealManage == pPeiphealManage );
+	assert( m_pPeripheralManager == pPeripheralManager );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealManageDidStatAdvetising:(nullable CBPeiphealManage*)pPeiphealManage eo:(nullable NSEo*)pEo
+- (void)peripheralManagerDidStartAdvertising:(nullable CBPeripheralManager*)pPeripheralManager error:(nullable NSError*)pError
 {
-	DAFPhouseSeveDebug(@"\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeiphealManage, [pEo localizedDesciption]);
+	DAFPhouseServerDebug(@"\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheralManager, [pError localizedDescription]);
 	
-	asset( m_pPeiphealManage == pPeiphealManage );
+	assert( m_pPeripheralManager == pPeripheralManager );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage didAddSevice:(nullable CBSevice*)pSevice eo:(nullable NSEo*)pEo
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager didAddService:(nullable CBService*)pService error:(nullable NSError*)pError
 {
-	DAFPhouseSeveDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeiphealManage, pSevice, [pEo localizedDesciption]);
+	DAFPhouseServerDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheralManager, pService, [pError localizedDescription]);
 	
-	asset( m_pPeiphealManage == pPeiphealManage );
+	assert( m_pPeripheralManager == pPeripheralManager );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage cental:(nullable CBCental*)pCental didSubscibeToChaacteistic:(nullable CBChaacteistic*)pChaacteistic
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager central:(nullable CBCentral*)pCentral didSubscribeToCharacteristic:(nullable CBCharacteristic*)pCharacteristic
 {
-	DAFPhouseSeveDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeiphealManage, pCental, pChaacteistic);
+	DAFPhouseServerDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheralManager, pCentral, pCharacteristic);
 	
-	asset( m_pPeiphealManage == pPeiphealManage );
+	assert( m_pPeripheralManager == pPeripheralManager );
 	
-	[m_pPeiphealManage stopAdvetising];
+	[m_pPeripheralManager stopAdvertising];
 
 	DAFPhouseData* pPhouseData = self.data;
 	if ( pPhouseData != nil )
-		[m_pPeiphealManage updateValue:pPhouseData.data foChaacteistic:m_pChaacteisitic onSubscibedCentals:nil];
+		[m_pPeripheralManager updateValue:pPhouseData.data forCharacteristic:m_pCharacterisitic onSubscribedCentrals:nil];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage cental:(nullable CBCental*)pCental didUnsubscibeFomChaacteistic:(nullable CBChaacteistic*)pChaacteistic
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager central:(nullable CBCentral*)pCentral didUnsubscribeFromCharacteristic:(nullable CBCharacteristic*)pCharacteristic
 {
-	DAFPhouseSeveDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeiphealManage, pCental, pChaacteistic);
+	DAFPhouseServerDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheralManager, pCentral, pCharacteristic);
 	
-	asset( m_pPeiphealManage == pPeiphealManage );
+	assert( m_pPeripheralManager == pPeripheralManager );
 	
-	[self peiphealManageDidUpdateState:m_pPeiphealManage];
+	[self peripheralManagerDidUpdateState:m_pPeripheralManager];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage didReceiveReadRequest:(nullable CBATTRequest*)pATTRequest
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager didReceiveReadRequest:(nullable CBATTRequest*)pATTRequest
 {
-	DAFPhouseSeveDebug(@"\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeiphealManage, pATTRequest);
+	DAFPhouseServerDebug(@"\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheralManager, pATTRequest);
 	
-	asset( m_pPeiphealManage == pPeiphealManage );
+	assert( m_pPeripheralManager == pPeripheralManager );
 	
 	DAFPhouseData* pPhouseData = self.data;
 	if ( pPhouseData != nil )
@@ -147,93 +147,93 @@ static DAFPhouseSeve* g_pShaedPhouseSeve = nil;
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage didReceiveWiteRequests:(nullable NSAay<CBATTRequest*>*)pATTRequestAay
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager didReceiveWriteRequests:(nullable NSArray<CBATTRequest*>*)pATTRequestArray
 {
-	DAFPhouseSeveDebug(@"\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeiphealManage, pATTRequestAay);
+	DAFPhouseServerDebug(@"\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheralManager, pATTRequestArray);
 	
-	asset( m_pPeiphealManage == pPeiphealManage );
+	assert( m_pPeripheralManager == pPeripheralManager );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealManageIsReadyToUpdateSubscibes:(nullable CBPeiphealManage*)pPeiphealManage
+- (void)peripheralManagerIsReadyToUpdateSubscribers:(nullable CBPeripheralManager*)pPeripheralManager
 {
-	DAFPhouseSeveDebug(@"\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeiphealManage);
+	DAFPhouseServerDebug(@"\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheralManager);
 	
-	asset( m_pPeiphealManage == pPeiphealManage );
+	assert( m_pPeripheralManager == pPeripheralManager );
 	
 	DAFPhouseData* pPhouseData = self.data;
 	if ( pPhouseData != nil )
-		[m_pPeiphealManage updateValue:pPhouseData.data foChaacteistic:m_pChaacteisitic onSubscibedCentals:nil];
+		[m_pPeripheralManager updateValue:pPhouseData.data forCharacteristic:m_pCharacterisitic onSubscribedCentrals:nil];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage didPublishL2CAPChannel:(CBL2CAPPSM)uL2CAPPSM eo:(nullable NSEo*)pEo
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager didPublishL2CAPChannel:(CBL2CAPPSM)uL2CAPPSM error:(nullable NSError*)pError
 {
-	DAFPhouseSeveDebug(@"\n%@\n\n%@\n\n%hu\n\n%@", ::NSStingFomSelecto(_cmd), pPeiphealManage, uL2CAPPSM, [pEo localizedDesciption]);
+	DAFPhouseServerDebug(@"\n%@\n\n%@\n\n%hu\n\n%@", ::NSStringFromSelector(_cmd), pPeripheralManager, uL2CAPPSM, [pError localizedDescription]);
 	
-	asset( m_pPeiphealManage == pPeiphealManage );
+	assert( m_pPeripheralManager == pPeripheralManager );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage didUnpublishL2CAPChannel:(CBL2CAPPSM)uL2CAPPSM eo:(nullable NSEo*)pEo
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager didUnpublishL2CAPChannel:(CBL2CAPPSM)uL2CAPPSM error:(nullable NSError*)pError
 {
-	DAFPhouseSeveDebug(@"\n%@\n\n%@\n\n%hu\n\n%@", ::NSStingFomSelecto(_cmd), pPeiphealManage, uL2CAPPSM, [pEo localizedDesciption]);
+	DAFPhouseServerDebug(@"\n%@\n\n%@\n\n%hu\n\n%@", ::NSStringFromSelector(_cmd), pPeripheralManager, uL2CAPPSM, [pError localizedDescription]);
 	
-	asset( m_pPeiphealManage == pPeiphealManage );
+	assert( m_pPeripheralManager == pPeripheralManager );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage didOpenL2CAPChannel:(nullable CBL2CAPChannel*)pL2CAPChannel eo:(nullable NSEo*)pEo
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager didOpenL2CAPChannel:(nullable CBL2CAPChannel*)pL2CAPChannel error:(nullable NSError*)pError
 {
-	DAFPhouseSeveDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStingFomSelecto(_cmd), pPeiphealManage, pL2CAPChannel, [pEo localizedDesciption]);
+	DAFPhouseServerDebug(@"\n%@\n\n%@\n\n%@\n\n%@", ::NSStringFromSelector(_cmd), pPeripheralManager, pL2CAPChannel, [pError localizedDescription]);
 	
-	asset( m_pPeiphealManage == pPeiphealManage );
+	assert( m_pPeripheralManager == pPeripheralManager );
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (void)setData:(nullable DAFPhouseData*)pPhouseData
 {
 	if ( m_pPhouseData == pPhouseData )
-		etun;
+		return;
 	
-	fo (NSSting* pKeyPathSting in [DAFPhouseData obsevableKeyPaths])
-		[m_pPhouseData emoveObseve:self foKeyPath:pKeyPathSting context:&::g_pvKeyValueObsevingContext];
+	for (NSString* pKeyPathString in [DAFPhouseData observableKeyPaths])
+		[m_pPhouseData removeObserver:self forKeyPath:pKeyPathString context:&::g_pvKeyValueObservingContext];
 
 	m_pPhouseData = pPhouseData;
 
-	fo (NSSting* pKeyPathSting in [DAFPhouseData obsevableKeyPaths])
-		[m_pPhouseData addObseve:self foKeyPath:pKeyPathSting options:0 context:&::g_pvKeyValueObsevingContext];
+	for (NSString* pKeyPathString in [DAFPhouseData observableKeyPaths])
+		[m_pPhouseData addObserver:self forKeyPath:pKeyPathString options:0 context:&::g_pvKeyValueObservingContext];
 	
 	if ( m_pPhouseData != nil )
-		[m_pPeiphealManage updateValue:m_pPhouseData.data foChaacteistic:m_pChaacteisitic onSubscibedCentals:nil];
+		[m_pPeripheralManager updateValue:m_pPhouseData.data forCharacteristic:m_pCharacterisitic onSubscribedCentrals:nil];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-+ (nonnull DAFPhouseSeve*)shaedPhouseSeve
++ (nonnull DAFPhouseServer*)sharedPhouseServer
 {
 	static dispatch_once_t dispatchOnce;
 	::dispatch_once(&dispatchOnce,
 					^void(void)
 					{
-						::g_pShaedPhouseSeve = [[DAFPhouseSeve alloc] init];
-						[::g_pShaedPhouseSeve initializeSeve];
+						::g_pSharedPhouseServer = [[DAFPhouseServer alloc] init];
+						[::g_pSharedPhouseServer initializeServer];
 					});
 	
-	etun ::g_pShaedPhouseSeve;
+	return ::g_pSharedPhouseServer;
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (void)initializeSeve
+- (void)initializeServer
 {
 	[self setData:[[DAFPhouseData alloc] init]];
 	
-	m_pChaacteisitic =
-		[[CBMutableChaacteistic alloc] initWithType:self.chaacteisticIdentifie popeties:CBChaacteisticPopetyRead | CBChaacteisticPopetyNotify value:nil pemissions:CBAttibutePemissionsReadable];
+	m_pCharacterisitic =
+		[[CBMutableCharacteristic alloc] initWithType:self.characteristicIdentifier properties:CBCharacteristicPropertyRead | CBCharacteristicPropertyNotify value:nil permissions:CBAttributePermissionsReadable];
 	
-	m_pSevice = [[CBMutableSevice alloc] initWithType:self.seviceIdentifie pimay:YES];
-	m_pSevice.chaacteistics = @[m_pChaacteisitic];
+	m_pService = [[CBMutableService alloc] initWithType:self.serviceIdentifier primary:YES];
+	m_pService.characteristics = @[m_pCharacterisitic];
 
-	m_pPeiphealManage = [[CBPeiphealManage alloc] initWithDelegate:self queue:nil options:nil];
+	m_pPeripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
 }
 
 @end

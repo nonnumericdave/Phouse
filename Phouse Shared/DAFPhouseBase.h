@@ -2,8 +2,8 @@
 //  DAFPhouseBase.h
 //  Phouse
 //
-//  Ceated by David Floes on 1/1/18.
-//  Copyight (c) 2018 David Floes. All ights eseved.
+//  Created by David Flores on 1/1/18.
+//  Copyright (c) 2018 David Flores. All rights reserved.
 //
 
 #ifndef DAFPhouseBase_h
@@ -12,17 +12,17 @@
 #define DAFPhouseBluetoothDebug 1
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-@inteface DAFPhouseBase : NSObject
+@interface DAFPhouseBase : NSObject
 
 // DAFPhouseBase
-@popety (eadonly, etain, nonatomic) CBUUID* peiphealIdentifie;
-- (CBUUID*)peiphealIdentifie;
+@property (readonly, retain, nonatomic) CBUUID* peripheralIdentifier;
+- (CBUUID*)peripheralIdentifier;
 
-@popety (eadonly, etain, nonatomic) CBUUID* seviceIdentifie;
-- (CBUUID*)seviceIdentifie;
+@property (readonly, retain, nonatomic) CBUUID* serviceIdentifier;
+- (CBUUID*)serviceIdentifier;
 
-@popety (eadonly, etain, nonatomic) CBUUID* chaacteisticIdentifie;
-- (CBUUID*)chaacteisticIdentifie;
+@property (readonly, retain, nonatomic) CBUUID* characteristicIdentifier;
+- (CBUUID*)characteristicIdentifier;
 
 @end
 

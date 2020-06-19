@@ -2,8 +2,8 @@
 //  DAFApplicationDelegate.mm
 //  Phouse
 //
-//  Ceated by David Floes on 1/1/18.
-//  Copyight (c) 2018 David Floes. All ights eseved.
+//  Created by David Flores on 1/1/18.
+//  Copyright (c) 2018 David Flores. All rights reserved.
 //
 
 #include "DAFApplicationDelegate.h"

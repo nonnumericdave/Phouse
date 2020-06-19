@@ -1,114 +1,114 @@
 // !$*UTF8*$!
 {
-	achiveVesion = 1;
+	archiveVersion = 1;
 	classes = {
 	};
-	objectVesion = 50;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		170219D620EFCBB00072ADE0 /* DAFApplicationDelegate.mm in Souces */ = {isa = PBXBuildFile; fileRef = 170219D520EFCBB00072ADE0 /* DAFApplicationDelegate.mm */; };
-		170219D920EFCBB00072ADE0 /* DAFViewContolle.mm in Souces */ = {isa = PBXBuildFile; fileRef = 170219D820EFCBB00072ADE0 /* DAFViewContolle.mm */; };
-		170219DC20EFCBB00072ADE0 /* Main.stoyboad in Resouces */ = {isa = PBXBuildFile; fileRef = 170219DA20EFCBB00072ADE0 /* Main.stoyboad */; };
-		170219DF20EFCBB00072ADE0 /* LaunchSceen.stoyboad in Resouces */ = {isa = PBXBuildFile; fileRef = 170219DD20EFCBB00072ADE0 /* LaunchSceen.stoyboad */; };
-		170219E220EFCBB00072ADE0 /* main.mm in Souces */ = {isa = PBXBuildFile; fileRef = 170219E120EFCBB00072ADE0 /* main.mm */; };
-		170219EB20EFCBB00072ADE0 /* DAFApplicationDelegate.mm in Souces */ = {isa = PBXBuildFile; fileRef = 170219EA20EFCBB00072ADE0 /* DAFApplicationDelegate.mm */; };
-		170219EE20EFCBB00072ADE0 /* DAFViewContolle.mm in Souces */ = {isa = PBXBuildFile; fileRef = 170219ED20EFCBB00072ADE0 /* DAFViewContolle.mm */; };
-		170219F120EFCBB00072ADE0 /* Main.stoyboad in Resouces */ = {isa = PBXBuildFile; fileRef = 170219EF20EFCBB00072ADE0 /* Main.stoyboad */; };
-		170219F420EFCBB00072ADE0 /* main.mm in Souces */ = {isa = PBXBuildFile; fileRef = 170219F320EFCBB00072ADE0 /* main.mm */; };
-		170219F920EFCBB00072ADE0 /* Assets.xcassets in Resouces */ = {isa = PBXBuildFile; fileRef = 170219CC20EFCBB00072ADE0 /* Assets.xcassets */; };
-		170219FA20EFCBB00072ADE0 /* Assets.xcassets in Resouces */ = {isa = PBXBuildFile; fileRef = 170219CC20EFCBB00072ADE0 /* Assets.xcassets */; };
-		17021A0520EFD91A0072ADE0 /* UIKit.famewok in Famewoks */ = {isa = PBXBuildFile; fileRef = 17021A0420EFD91A0072ADE0 /* UIKit.famewok */; };
-		17021A0720EFD9680072ADE0 /* AppKit.famewok in Famewoks */ = {isa = PBXBuildFile; fileRef = 17021A0620EFD9680072ADE0 /* AppKit.famewok */; };
-		171F1FF420F96081001836F6 /* CoeMotion.famewok in Famewoks */ = {isa = PBXBuildFile; fileRef = 171F1FF320F96081001836F6 /* CoeMotion.famewok */; };
-		1788CF0F20F00795004662AA /* CoeBluetooth.famewok in Famewoks */ = {isa = PBXBuildFile; fileRef = 1788CF0E20F00795004662AA /* CoeBluetooth.famewok */; };
-		1788CF1120F007A0004662AA /* CoeBluetooth.famewok in Famewoks */ = {isa = PBXBuildFile; fileRef = 1788CF1020F007A0004662AA /* CoeBluetooth.famewok */; };
-		1788CF1420F00BB9004662AA /* DAFPhouseClient.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788CF1320F00BB9004662AA /* DAFPhouseClient.mm */; };
-		1788CF1720F00C1C004662AA /* DAFPhouseSeve.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788CF1620F00C1C004662AA /* DAFPhouseSeve.mm */; };
-		1788CF1820F00C8E004662AA /* DAFPhouseClient.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788CF1320F00BB9004662AA /* DAFPhouseClient.mm */; };
-		1788CF1920F00C8E004662AA /* DAFPhouseSeve.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788CF1620F00C1C004662AA /* DAFPhouseSeve.mm */; };
-		1788D01B20F0118A004662AA /* DAFPhouseBase.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788D01A20F0118A004662AA /* DAFPhouseBase.mm */; };
-		1788D01C20F01252004662AA /* DAFPhouseBase.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788D01A20F0118A004662AA /* DAFPhouseBase.mm */; };
-		1788D01F20F42363004662AA /* DAFPhouseData.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788D01E20F42363004662AA /* DAFPhouseData.mm */; };
-		1788D02120F42F7A004662AA /* DAFPhouseData.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788D01E20F42363004662AA /* DAFPhouseData.mm */; };
-		17E6DEED20FE45D300CA99F8 /* CoeGaphics.famewok in Famewoks */ = {isa = PBXBuildFile; fileRef = 17E6DEEC20FE45D300CA99F8 /* CoeGaphics.famewok */; };
+		170219D620EFCBB00072ADE0 /* DAFApplicationDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 170219D520EFCBB00072ADE0 /* DAFApplicationDelegate.mm */; };
+		170219D920EFCBB00072ADE0 /* DAFViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 170219D820EFCBB00072ADE0 /* DAFViewController.mm */; };
+		170219DC20EFCBB00072ADE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170219DA20EFCBB00072ADE0 /* Main.storyboard */; };
+		170219DF20EFCBB00072ADE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170219DD20EFCBB00072ADE0 /* LaunchScreen.storyboard */; };
+		170219E220EFCBB00072ADE0 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 170219E120EFCBB00072ADE0 /* main.mm */; };
+		170219EB20EFCBB00072ADE0 /* DAFApplicationDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 170219EA20EFCBB00072ADE0 /* DAFApplicationDelegate.mm */; };
+		170219EE20EFCBB00072ADE0 /* DAFViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 170219ED20EFCBB00072ADE0 /* DAFViewController.mm */; };
+		170219F120EFCBB00072ADE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170219EF20EFCBB00072ADE0 /* Main.storyboard */; };
+		170219F420EFCBB00072ADE0 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 170219F320EFCBB00072ADE0 /* main.mm */; };
+		170219F920EFCBB00072ADE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170219CC20EFCBB00072ADE0 /* Assets.xcassets */; };
+		170219FA20EFCBB00072ADE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170219CC20EFCBB00072ADE0 /* Assets.xcassets */; };
+		17021A0520EFD91A0072ADE0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17021A0420EFD91A0072ADE0 /* UIKit.framework */; };
+		17021A0720EFD9680072ADE0 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17021A0620EFD9680072ADE0 /* AppKit.framework */; };
+		171F1FF420F96081001836F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171F1FF320F96081001836F6 /* CoreMotion.framework */; };
+		1788CF0F20F00795004662AA /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1788CF0E20F00795004662AA /* CoreBluetooth.framework */; };
+		1788CF1120F007A0004662AA /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1788CF1020F007A0004662AA /* CoreBluetooth.framework */; };
+		1788CF1420F00BB9004662AA /* DAFPhouseClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1788CF1320F00BB9004662AA /* DAFPhouseClient.mm */; };
+		1788CF1720F00C1C004662AA /* DAFPhouseServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1788CF1620F00C1C004662AA /* DAFPhouseServer.mm */; };
+		1788CF1820F00C8E004662AA /* DAFPhouseClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1788CF1320F00BB9004662AA /* DAFPhouseClient.mm */; };
+		1788CF1920F00C8E004662AA /* DAFPhouseServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1788CF1620F00C1C004662AA /* DAFPhouseServer.mm */; };
+		1788D01B20F0118A004662AA /* DAFPhouseBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1788D01A20F0118A004662AA /* DAFPhouseBase.mm */; };
+		1788D01C20F01252004662AA /* DAFPhouseBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1788D01A20F0118A004662AA /* DAFPhouseBase.mm */; };
+		1788D01F20F42363004662AA /* DAFPhouseData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1788D01E20F42363004662AA /* DAFPhouseData.mm */; };
+		1788D02120F42F7A004662AA /* DAFPhouseData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1788D01E20F42363004662AA /* DAFPhouseData.mm */; };
+		17E6DEED20FE45D300CA99F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E6DEEC20FE45D300CA99F8 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXFileRefeence section */
-		170219CC20EFCBB00072ADE0 /* Assets.xcassets */ = {isa = PBXFileRefeence; lastKnownFileType = folde.assetcatalog; path = Assets.xcassets; souceTee = "<goup>"; };
-		170219D120EFCBB00072ADE0 /* Phouse.app */ = {isa = PBXFileRefeence; explicitFileType = wappe.application; includeInIndex = 0; path = Phouse.app; souceTee = BUILT_PRODUCTS_DIR; };
-		170219D420EFCBB00072ADE0 /* DAFApplicationDelegate.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFApplicationDelegate.h; souceTee = "<goup>"; };
-		170219D520EFCBB00072ADE0 /* DAFApplicationDelegate.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFApplicationDelegate.mm; souceTee = "<goup>"; };
-		170219D720EFCBB00072ADE0 /* DAFViewContolle.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFViewContolle.h; souceTee = "<goup>"; };
-		170219D820EFCBB00072ADE0 /* DAFViewContolle.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFViewContolle.mm; souceTee = "<goup>"; };
-		170219DB20EFCBB00072ADE0 /* Base */ = {isa = PBXFileRefeence; lastKnownFileType = file.stoyboad; name = Base; path = Base.lpoj/Main.stoyboad; souceTee = "<goup>"; };
-		170219DE20EFCBB00072ADE0 /* Base */ = {isa = PBXFileRefeence; lastKnownFileType = file.stoyboad; name = Base; path = Base.lpoj/LaunchSceen.stoyboad; souceTee = "<goup>"; };
-		170219E020EFCBB00072ADE0 /* Info.plist */ = {isa = PBXFileRefeence; lastKnownFileType = text.plist.xml; path = Info.plist; souceTee = "<goup>"; };
-		170219E120EFCBB00072ADE0 /* main.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = main.mm; souceTee = "<goup>"; };
-		170219E720EFCBB00072ADE0 /* Phouse.app */ = {isa = PBXFileRefeence; explicitFileType = wappe.application; includeInIndex = 0; path = Phouse.app; souceTee = BUILT_PRODUCTS_DIR; };
-		170219E920EFCBB00072ADE0 /* DAFApplicationDelegate.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFApplicationDelegate.h; souceTee = "<goup>"; };
-		170219EA20EFCBB00072ADE0 /* DAFApplicationDelegate.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFApplicationDelegate.mm; souceTee = "<goup>"; };
-		170219EC20EFCBB00072ADE0 /* DAFViewContolle.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFViewContolle.h; souceTee = "<goup>"; };
-		170219ED20EFCBB00072ADE0 /* DAFViewContolle.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFViewContolle.mm; souceTee = "<goup>"; };
-		170219F020EFCBB00072ADE0 /* Base */ = {isa = PBXFileRefeence; lastKnownFileType = file.stoyboad; name = Base; path = Base.lpoj/Main.stoyboad; souceTee = "<goup>"; };
-		170219F220EFCBB00072ADE0 /* Info.plist */ = {isa = PBXFileRefeence; lastKnownFileType = text.plist.xml; path = Info.plist; souceTee = "<goup>"; };
-		170219F320EFCBB00072ADE0 /* main.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = main.mm; souceTee = "<goup>"; };
-		17021A0420EFD91A0072ADE0 /* UIKit.famewok */ = {isa = PBXFileRefeence; lastKnownFileType = wappe.famewok; name = UIKit.famewok; path = Platfoms/iPhoneOS.platfom/Develope/SDKs/iPhoneOS11.4.sdk/System/Libay/Famewoks/UIKit.famewok; souceTee = DEVELOPER_DIR; };
-		17021A0620EFD9680072ADE0 /* AppKit.famewok */ = {isa = PBXFileRefeence; lastKnownFileType = wappe.famewok; name = AppKit.famewok; path = System/Libay/Famewoks/AppKit.famewok; souceTee = SDKROOT; };
-		17021A0820EFDE620072ADE0 /* Phouse.pch */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = Phouse.pch; souceTee = "<goup>"; };
-		17021A0920EFDF490072ADE0 /* Phouse.pch */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = Phouse.pch; souceTee = "<goup>"; };
-		171F1FF320F96081001836F6 /* CoeMotion.famewok */ = {isa = PBXFileRefeence; lastKnownFileType = wappe.famewok; name = CoeMotion.famewok; path = Platfoms/iPhoneOS.platfom/Develope/SDKs/iPhoneOS12.0.sdk/System/Libay/Famewoks/CoeMotion.famewok; souceTee = DEVELOPER_DIR; };
-		1788CF0E20F00795004662AA /* CoeBluetooth.famewok */ = {isa = PBXFileRefeence; lastKnownFileType = wappe.famewok; name = CoeBluetooth.famewok; path = Platfoms/iPhoneOS.platfom/Develope/SDKs/iPhoneOS11.4.sdk/System/Libay/Famewoks/CoeBluetooth.famewok; souceTee = DEVELOPER_DIR; };
-		1788CF1020F007A0004662AA /* CoeBluetooth.famewok */ = {isa = PBXFileRefeence; lastKnownFileType = wappe.famewok; name = CoeBluetooth.famewok; path = System/Libay/Famewoks/CoeBluetooth.famewok; souceTee = SDKROOT; };
-		1788CF1220F00BB9004662AA /* DAFPhouseClient.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFPhouseClient.h; souceTee = "<goup>"; };
-		1788CF1320F00BB9004662AA /* DAFPhouseClient.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFPhouseClient.mm; souceTee = "<goup>"; };
-		1788CF1520F00C1C004662AA /* DAFPhouseSeve.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFPhouseSeve.h; souceTee = "<goup>"; };
-		1788CF1620F00C1C004662AA /* DAFPhouseSeve.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFPhouseSeve.mm; souceTee = "<goup>"; };
-		1788D01920F0118A004662AA /* DAFPhouseBase.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFPhouseBase.h; souceTee = "<goup>"; };
-		1788D01A20F0118A004662AA /* DAFPhouseBase.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFPhouseBase.mm; souceTee = "<goup>"; };
-		1788D01D20F42363004662AA /* DAFPhouseData.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFPhouseData.h; souceTee = "<goup>"; };
-		1788D01E20F42363004662AA /* DAFPhouseData.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFPhouseData.mm; souceTee = "<goup>"; };
-		17E6DEEC20FE45D300CA99F8 /* CoeGaphics.famewok */ = {isa = PBXFileRefeence; lastKnownFileType = wappe.famewok; name = CoeGaphics.famewok; path = System/Libay/Famewoks/CoeGaphics.famewok; souceTee = SDKROOT; };
-/* End PBXFileRefeence section */
+/* Begin PBXFileReference section */
+		170219CC20EFCBB00072ADE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		170219D120EFCBB00072ADE0 /* Phouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		170219D420EFCBB00072ADE0 /* DAFApplicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAFApplicationDelegate.h; sourceTree = "<group>"; };
+		170219D520EFCBB00072ADE0 /* DAFApplicationDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DAFApplicationDelegate.mm; sourceTree = "<group>"; };
+		170219D720EFCBB00072ADE0 /* DAFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAFViewController.h; sourceTree = "<group>"; };
+		170219D820EFCBB00072ADE0 /* DAFViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DAFViewController.mm; sourceTree = "<group>"; };
+		170219DB20EFCBB00072ADE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		170219DE20EFCBB00072ADE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		170219E020EFCBB00072ADE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		170219E120EFCBB00072ADE0 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		170219E720EFCBB00072ADE0 /* Phouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		170219E920EFCBB00072ADE0 /* DAFApplicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAFApplicationDelegate.h; sourceTree = "<group>"; };
+		170219EA20EFCBB00072ADE0 /* DAFApplicationDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DAFApplicationDelegate.mm; sourceTree = "<group>"; };
+		170219EC20EFCBB00072ADE0 /* DAFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAFViewController.h; sourceTree = "<group>"; };
+		170219ED20EFCBB00072ADE0 /* DAFViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DAFViewController.mm; sourceTree = "<group>"; };
+		170219F020EFCBB00072ADE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		170219F220EFCBB00072ADE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		170219F320EFCBB00072ADE0 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		17021A0420EFD91A0072ADE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		17021A0620EFD9680072ADE0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		17021A0820EFDE620072ADE0 /* Phouse.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Phouse.pch; sourceTree = "<group>"; };
+		17021A0920EFDF490072ADE0 /* Phouse.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Phouse.pch; sourceTree = "<group>"; };
+		171F1FF320F96081001836F6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		1788CF0E20F00795004662AA /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
+		1788CF1020F007A0004662AA /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		1788CF1220F00BB9004662AA /* DAFPhouseClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAFPhouseClient.h; sourceTree = "<group>"; };
+		1788CF1320F00BB9004662AA /* DAFPhouseClient.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DAFPhouseClient.mm; sourceTree = "<group>"; };
+		1788CF1520F00C1C004662AA /* DAFPhouseServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAFPhouseServer.h; sourceTree = "<group>"; };
+		1788CF1620F00C1C004662AA /* DAFPhouseServer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DAFPhouseServer.mm; sourceTree = "<group>"; };
+		1788D01920F0118A004662AA /* DAFPhouseBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAFPhouseBase.h; sourceTree = "<group>"; };
+		1788D01A20F0118A004662AA /* DAFPhouseBase.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DAFPhouseBase.mm; sourceTree = "<group>"; };
+		1788D01D20F42363004662AA /* DAFPhouseData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAFPhouseData.h; sourceTree = "<group>"; };
+		1788D01E20F42363004662AA /* DAFPhouseData.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DAFPhouseData.mm; sourceTree = "<group>"; };
+		17E6DEEC20FE45D300CA99F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
 
-/* Begin PBXFamewoksBuildPhase section */
-		170219CE20EFCBB00072ADE0 /* Famewoks */ = {
-			isa = PBXFamewoksBuildPhase;
+/* Begin PBXFrameworksBuildPhase section */
+		170219CE20EFCBB00072ADE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1788CF0F20F00795004662AA /* CoeBluetooth.famewok in Famewoks */,
-				171F1FF420F96081001836F6 /* CoeMotion.famewok in Famewoks */,
-				17021A0520EFD91A0072ADE0 /* UIKit.famewok in Famewoks */,
+				1788CF0F20F00795004662AA /* CoreBluetooth.framework in Frameworks */,
+				171F1FF420F96081001836F6 /* CoreMotion.framework in Frameworks */,
+				17021A0520EFD91A0072ADE0 /* UIKit.framework in Frameworks */,
 			);
-			unOnlyFoDeploymentPostpocessing = 0;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		170219E420EFCBB00072ADE0 /* Famewoks */ = {
-			isa = PBXFamewoksBuildPhase;
+		170219E420EFCBB00072ADE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17021A0720EFD9680072ADE0 /* AppKit.famewok in Famewoks */,
-				1788CF1120F007A0004662AA /* CoeBluetooth.famewok in Famewoks */,
-				17E6DEED20FE45D300CA99F8 /* CoeGaphics.famewok in Famewoks */,
+				17021A0720EFD9680072ADE0 /* AppKit.framework in Frameworks */,
+				1788CF1120F007A0004662AA /* CoreBluetooth.framework in Frameworks */,
+				17E6DEED20FE45D300CA99F8 /* CoreGraphics.framework in Frameworks */,
 			);
-			unOnlyFoDeploymentPostpocessing = 0;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXFamewoksBuildPhase section */
+/* End PBXFrameworksBuildPhase section */
 
-/* Begin PBXGoup section */
+/* Begin PBXGroup section */
 		170219C320EFCBAE0072ADE0 = {
-			isa = PBXGoup;
-			childen = (
-				170219C820EFCBAF0072ADE0 /* Phouse Shaed */,
+			isa = PBXGroup;
+			children = (
+				170219C820EFCBAF0072ADE0 /* Phouse Shared */,
 				170219D320EFCBB00072ADE0 /* Phouse iOS */,
 				170219E820EFCBB00072ADE0 /* Phouse macOS */,
-				170219D220EFCBB00072ADE0 /* Poducts */,
-				17021A0320EFD91A0072ADE0 /* Famewoks */,
+				170219D220EFCBB00072ADE0 /* Products */,
+				17021A0320EFD91A0072ADE0 /* Frameworks */,
 			);
-			souceTee = "<goup>";
+			sourceTree = "<group>";
 		};
-		170219C820EFCBAF0072ADE0 /* Phouse Shaed */ = {
-			isa = PBXGoup;
-			childen = (
+		170219C820EFCBAF0072ADE0 /* Phouse Shared */ = {
+			isa = PBXGroup;
+			children = (
 				170219CC20EFCBB00072ADE0 /* Assets.xcassets */,
 				1788D01920F0118A004662AA /* DAFPhouseBase.h */,
 				1788D01A20F0118A004662AA /* DAFPhouseBase.mm */,
@@ -116,221 +116,221 @@
 				1788CF1320F00BB9004662AA /* DAFPhouseClient.mm */,
 				1788D01D20F42363004662AA /* DAFPhouseData.h */,
 				1788D01E20F42363004662AA /* DAFPhouseData.mm */,
-				1788CF1520F00C1C004662AA /* DAFPhouseSeve.h */,
-				1788CF1620F00C1C004662AA /* DAFPhouseSeve.mm */,
+				1788CF1520F00C1C004662AA /* DAFPhouseServer.h */,
+				1788CF1620F00C1C004662AA /* DAFPhouseServer.mm */,
 			);
-			path = "Phouse Shaed";
-			souceTee = "<goup>";
+			path = "Phouse Shared";
+			sourceTree = "<group>";
 		};
-		170219D220EFCBB00072ADE0 /* Poducts */ = {
-			isa = PBXGoup;
-			childen = (
+		170219D220EFCBB00072ADE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
 				170219D120EFCBB00072ADE0 /* Phouse.app */,
 				170219E720EFCBB00072ADE0 /* Phouse.app */,
 			);
-			name = Poducts;
-			souceTee = "<goup>";
+			name = Products;
+			sourceTree = "<group>";
 		};
 		170219D320EFCBB00072ADE0 /* Phouse iOS */ = {
-			isa = PBXGoup;
-			childen = (
+			isa = PBXGroup;
+			children = (
 				170219E020EFCBB00072ADE0 /* Info.plist */,
-				170219DD20EFCBB00072ADE0 /* LaunchSceen.stoyboad */,
+				170219DD20EFCBB00072ADE0 /* LaunchScreen.storyboard */,
 				170219E120EFCBB00072ADE0 /* main.mm */,
-				170219DA20EFCBB00072ADE0 /* Main.stoyboad */,
+				170219DA20EFCBB00072ADE0 /* Main.storyboard */,
 				17021A0820EFDE620072ADE0 /* Phouse.pch */,
 				170219D420EFCBB00072ADE0 /* DAFApplicationDelegate.h */,
 				170219D520EFCBB00072ADE0 /* DAFApplicationDelegate.mm */,
-				170219D720EFCBB00072ADE0 /* DAFViewContolle.h */,
-				170219D820EFCBB00072ADE0 /* DAFViewContolle.mm */,
+				170219D720EFCBB00072ADE0 /* DAFViewController.h */,
+				170219D820EFCBB00072ADE0 /* DAFViewController.mm */,
 			);
 			path = "Phouse iOS";
-			souceTee = "<goup>";
+			sourceTree = "<group>";
 		};
 		170219E820EFCBB00072ADE0 /* Phouse macOS */ = {
-			isa = PBXGoup;
-			childen = (
+			isa = PBXGroup;
+			children = (
 				170219F220EFCBB00072ADE0 /* Info.plist */,
 				170219F320EFCBB00072ADE0 /* main.mm */,
-				170219EF20EFCBB00072ADE0 /* Main.stoyboad */,
+				170219EF20EFCBB00072ADE0 /* Main.storyboard */,
 				17021A0920EFDF490072ADE0 /* Phouse.pch */,
 				170219E920EFCBB00072ADE0 /* DAFApplicationDelegate.h */,
 				170219EA20EFCBB00072ADE0 /* DAFApplicationDelegate.mm */,
-				170219EC20EFCBB00072ADE0 /* DAFViewContolle.h */,
-				170219ED20EFCBB00072ADE0 /* DAFViewContolle.mm */,
+				170219EC20EFCBB00072ADE0 /* DAFViewController.h */,
+				170219ED20EFCBB00072ADE0 /* DAFViewController.mm */,
 			);
 			path = "Phouse macOS";
-			souceTee = "<goup>";
+			sourceTree = "<group>";
 		};
-		17021A0320EFD91A0072ADE0 /* Famewoks */ = {
-			isa = PBXGoup;
-			childen = (
-				17021A0620EFD9680072ADE0 /* AppKit.famewok */,
-				17E6DEEC20FE45D300CA99F8 /* CoeGaphics.famewok */,
-				1788CF0E20F00795004662AA /* CoeBluetooth.famewok */,
-				1788CF1020F007A0004662AA /* CoeBluetooth.famewok */,
-				171F1FF320F96081001836F6 /* CoeMotion.famewok */,
-				17021A0420EFD91A0072ADE0 /* UIKit.famewok */,
+		17021A0320EFD91A0072ADE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17021A0620EFD9680072ADE0 /* AppKit.framework */,
+				17E6DEEC20FE45D300CA99F8 /* CoreGraphics.framework */,
+				1788CF0E20F00795004662AA /* CoreBluetooth.framework */,
+				1788CF1020F007A0004662AA /* CoreBluetooth.framework */,
+				171F1FF320F96081001836F6 /* CoreMotion.framework */,
+				17021A0420EFD91A0072ADE0 /* UIKit.framework */,
 			);
-			name = Famewoks;
-			souceTee = "<goup>";
+			name = Frameworks;
+			sourceTree = "<group>";
 		};
-/* End PBXGoup section */
+/* End PBXGroup section */
 
-/* Begin PBXNativeTaget section */
+/* Begin PBXNativeTarget section */
 		170219D020EFCBB00072ADE0 /* Phouse iOS */ = {
-			isa = PBXNativeTaget;
-			buildConfiguationList = 170219FD20EFCBB00072ADE0 /* Build configuation list fo PBXNativeTaget "Phouse iOS" */;
+			isa = PBXNativeTarget;
+			buildConfigurationList = 170219FD20EFCBB00072ADE0 /* Build configuration list for PBXNativeTarget "Phouse iOS" */;
 			buildPhases = (
-				170219CD20EFCBB00072ADE0 /* Souces */,
-				170219CE20EFCBB00072ADE0 /* Famewoks */,
-				170219CF20EFCBB00072ADE0 /* Resouces */,
+				170219CD20EFCBB00072ADE0 /* Sources */,
+				170219CE20EFCBB00072ADE0 /* Frameworks */,
+				170219CF20EFCBB00072ADE0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Phouse iOS";
-			poductName = "Phouse iOS";
-			poductRefeence = 170219D120EFCBB00072ADE0 /* Phouse.app */;
-			poductType = "com.apple.poduct-type.application";
+			productName = "Phouse iOS";
+			productReference = 170219D120EFCBB00072ADE0 /* Phouse.app */;
+			productType = "com.apple.product-type.application";
 		};
 		170219E620EFCBB00072ADE0 /* Phouse macOS */ = {
-			isa = PBXNativeTaget;
-			buildConfiguationList = 17021A0020EFCBB00072ADE0 /* Build configuation list fo PBXNativeTaget "Phouse macOS" */;
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17021A0020EFCBB00072ADE0 /* Build configuration list for PBXNativeTarget "Phouse macOS" */;
 			buildPhases = (
-				170219E320EFCBB00072ADE0 /* Souces */,
-				170219E420EFCBB00072ADE0 /* Famewoks */,
-				170219E520EFCBB00072ADE0 /* Resouces */,
+				170219E320EFCBB00072ADE0 /* Sources */,
+				170219E420EFCBB00072ADE0 /* Frameworks */,
+				170219E520EFCBB00072ADE0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Phouse macOS";
-			poductName = "Phouse macOS";
-			poductRefeence = 170219E720EFCBB00072ADE0 /* Phouse.app */;
-			poductType = "com.apple.poduct-type.application";
+			productName = "Phouse macOS";
+			productReference = 170219E720EFCBB00072ADE0 /* Phouse.app */;
+			productType = "com.apple.product-type.application";
 		};
-/* End PBXNativeTaget section */
+/* End PBXNativeTarget section */
 
-/* Begin PBXPoject section */
-		170219C420EFCBAE0072ADE0 /* Poject object */ = {
-			isa = PBXPoject;
-			attibutes = {
-				LastUpgadeCheck = 0940;
-				ORGANIZATIONNAME = "David Floes";
-				TagetAttibutes = {
+/* Begin PBXProject section */
+		170219C420EFCBAE0072ADE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "David Flores";
+				TargetAttributes = {
 					170219D020EFCBB00072ADE0 = {
-						CeatedOnToolsVesion = 9.4;
+						CreatedOnToolsVersion = 9.4;
 					};
 					170219E620EFCBB00072ADE0 = {
-						CeatedOnToolsVesion = 9.4;
+						CreatedOnToolsVersion = 9.4;
 					};
 				};
 			};
-			buildConfiguationList = 170219C720EFCBAE0072ADE0 /* Build configuation list fo PBXPoject "Phouse" */;
-			compatibilityVesion = "Xcode 9.3";
+			buildConfigurationList = 170219C720EFCBAE0072ADE0 /* Build configuration list for PBXProject "Phouse" */;
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
-			hasScannedFoEncodings = 0;
+			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGoup = 170219C320EFCBAE0072ADE0;
-			poductRefGoup = 170219D220EFCBB00072ADE0 /* Poducts */;
-			pojectDiPath = "";
-			pojectRoot = "";
-			tagets = (
+			mainGroup = 170219C320EFCBAE0072ADE0;
+			productRefGroup = 170219D220EFCBB00072ADE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
 				170219D020EFCBB00072ADE0 /* Phouse iOS */,
 				170219E620EFCBB00072ADE0 /* Phouse macOS */,
 			);
 		};
-/* End PBXPoject section */
+/* End PBXProject section */
 
-/* Begin PBXResoucesBuildPhase section */
-		170219CF20EFCBB00072ADE0 /* Resouces */ = {
-			isa = PBXResoucesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		170219CF20EFCBB00072ADE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				170219DC20EFCBB00072ADE0 /* Main.stoyboad in Resouces */,
-				170219DF20EFCBB00072ADE0 /* LaunchSceen.stoyboad in Resouces */,
-				170219F920EFCBB00072ADE0 /* Assets.xcassets in Resouces */,
+				170219DC20EFCBB00072ADE0 /* Main.storyboard in Resources */,
+				170219DF20EFCBB00072ADE0 /* LaunchScreen.storyboard in Resources */,
+				170219F920EFCBB00072ADE0 /* Assets.xcassets in Resources */,
 			);
-			unOnlyFoDeploymentPostpocessing = 0;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		170219E520EFCBB00072ADE0 /* Resouces */ = {
-			isa = PBXResoucesBuildPhase;
+		170219E520EFCBB00072ADE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				170219F120EFCBB00072ADE0 /* Main.stoyboad in Resouces */,
-				170219FA20EFCBB00072ADE0 /* Assets.xcassets in Resouces */,
+				170219F120EFCBB00072ADE0 /* Main.storyboard in Resources */,
+				170219FA20EFCBB00072ADE0 /* Assets.xcassets in Resources */,
 			);
-			unOnlyFoDeploymentPostpocessing = 0;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResoucesBuildPhase section */
+/* End PBXResourcesBuildPhase section */
 
-/* Begin PBXSoucesBuildPhase section */
-		170219CD20EFCBB00072ADE0 /* Souces */ = {
-			isa = PBXSoucesBuildPhase;
+/* Begin PBXSourcesBuildPhase section */
+		170219CD20EFCBB00072ADE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				170219E220EFCBB00072ADE0 /* main.mm in Souces */,
-				170219D620EFCBB00072ADE0 /* DAFApplicationDelegate.mm in Souces */,
-				1788D01B20F0118A004662AA /* DAFPhouseBase.mm in Souces */,
-				1788CF1420F00BB9004662AA /* DAFPhouseClient.mm in Souces */,
-				1788D01F20F42363004662AA /* DAFPhouseData.mm in Souces */,
-				1788CF1720F00C1C004662AA /* DAFPhouseSeve.mm in Souces */,
-				170219D920EFCBB00072ADE0 /* DAFViewContolle.mm in Souces */,
+				170219E220EFCBB00072ADE0 /* main.mm in Sources */,
+				170219D620EFCBB00072ADE0 /* DAFApplicationDelegate.mm in Sources */,
+				1788D01B20F0118A004662AA /* DAFPhouseBase.mm in Sources */,
+				1788CF1420F00BB9004662AA /* DAFPhouseClient.mm in Sources */,
+				1788D01F20F42363004662AA /* DAFPhouseData.mm in Sources */,
+				1788CF1720F00C1C004662AA /* DAFPhouseServer.mm in Sources */,
+				170219D920EFCBB00072ADE0 /* DAFViewController.mm in Sources */,
 			);
-			unOnlyFoDeploymentPostpocessing = 0;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		170219E320EFCBB00072ADE0 /* Souces */ = {
-			isa = PBXSoucesBuildPhase;
+		170219E320EFCBB00072ADE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				170219F420EFCBB00072ADE0 /* main.mm in Souces */,
-				170219EB20EFCBB00072ADE0 /* DAFApplicationDelegate.mm in Souces */,
-				1788D01C20F01252004662AA /* DAFPhouseBase.mm in Souces */,
-				1788CF1820F00C8E004662AA /* DAFPhouseClient.mm in Souces */,
-				1788D02120F42F7A004662AA /* DAFPhouseData.mm in Souces */,
-				1788CF1920F00C8E004662AA /* DAFPhouseSeve.mm in Souces */,
-				170219EE20EFCBB00072ADE0 /* DAFViewContolle.mm in Souces */,
+				170219F420EFCBB00072ADE0 /* main.mm in Sources */,
+				170219EB20EFCBB00072ADE0 /* DAFApplicationDelegate.mm in Sources */,
+				1788D01C20F01252004662AA /* DAFPhouseBase.mm in Sources */,
+				1788CF1820F00C8E004662AA /* DAFPhouseClient.mm in Sources */,
+				1788D02120F42F7A004662AA /* DAFPhouseData.mm in Sources */,
+				1788CF1920F00C8E004662AA /* DAFPhouseServer.mm in Sources */,
+				170219EE20EFCBB00072ADE0 /* DAFViewController.mm in Sources */,
 			);
-			unOnlyFoDeploymentPostpocessing = 0;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXSoucesBuildPhase section */
+/* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVaiantGoup section */
-		170219DA20EFCBB00072ADE0 /* Main.stoyboad */ = {
-			isa = PBXVaiantGoup;
-			childen = (
+/* Begin PBXVariantGroup section */
+		170219DA20EFCBB00072ADE0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
 				170219DB20EFCBB00072ADE0 /* Base */,
 			);
-			name = Main.stoyboad;
-			souceTee = "<goup>";
+			name = Main.storyboard;
+			sourceTree = "<group>";
 		};
-		170219DD20EFCBB00072ADE0 /* LaunchSceen.stoyboad */ = {
-			isa = PBXVaiantGoup;
-			childen = (
+		170219DD20EFCBB00072ADE0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
 				170219DE20EFCBB00072ADE0 /* Base */,
 			);
-			name = LaunchSceen.stoyboad;
-			souceTee = "<goup>";
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
 		};
-		170219EF20EFCBB00072ADE0 /* Main.stoyboad */ = {
-			isa = PBXVaiantGoup;
-			childen = (
+		170219EF20EFCBB00072ADE0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
 				170219F020EFCBB00072ADE0 /* Base */,
 			);
-			name = Main.stoyboad;
-			souceTee = "<goup>";
+			name = Main.storyboard;
+			sourceTree = "<group>";
 		};
-/* End PBXVaiantGoup section */
+/* End PBXVariantGroup section */
 
-/* Begin XCBuildConfiguation section */
+/* Begin XCBuildConfiguration section */
 		170219FB20EFCBB00072ADE0 /* Debug */ = {
-			isa = XCBuildConfiguation;
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -362,7 +362,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwaf;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -371,7 +371,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
-					"$(inheited)",
+					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -385,7 +385,7 @@
 			name = Debug;
 		};
 		170219FC20EFCBB00072ADE0 /* Release */ = {
-			isa = XCBuildConfiguation;
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -417,7 +417,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwaf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -433,10 +433,10 @@
 			name = Release;
 		};
 		170219FE20EFCBB00072ADE0 /* Debug */ = {
-			isa = XCBuildConfiguation;
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Develope";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9M229JAFBZ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -444,10 +444,10 @@
 				INFOPLIST_FILE = "Phouse iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inheited)",
-					"@executable_path/Famewoks",
+					"$(inherited)",
+					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.playingandsuffeing.Phouse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.playingandsuffering.Phouse;
 				PRODUCT_NAME = Phouse;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,10 +455,10 @@
 			name = Debug;
 		};
 		170219FF20EFCBB00072ADE0 /* Release */ = {
-			isa = XCBuildConfiguation;
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Develope";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9M229JAFBZ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -466,10 +466,10 @@
 				INFOPLIST_FILE = "Phouse iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inheited)",
-					"@executable_path/Famewoks",
+					"$(inherited)",
+					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.playingandsuffeing.Phouse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.playingandsuffering.Phouse;
 				PRODUCT_NAME = Phouse;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -478,7 +478,7 @@
 			name = Release;
 		};
 		17021A0120EFCBB00072ADE0 /* Debug */ = {
-			isa = XCBuildConfiguation;
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
@@ -489,18 +489,18 @@
 				GCC_PREFIX_HEADER = "Phouse macOS/Phouse.pch";
 				INFOPLIST_FILE = "Phouse macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inheited)",
-					"@executable_path/../Famewoks",
+					"$(inherited)",
+					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.playingandsuffeing.Phouse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.playingandsuffering.Phouse;
 				PRODUCT_NAME = Phouse;
 				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		17021A0220EFCBB00072ADE0 /* Release */ = {
-			isa = XCBuildConfiguation;
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
@@ -511,47 +511,47 @@
 				GCC_PREFIX_HEADER = "Phouse macOS/Phouse.pch";
 				INFOPLIST_FILE = "Phouse macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inheited)",
-					"@executable_path/../Famewoks",
+					"$(inherited)",
+					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.playingandsuffeing.Phouse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.playingandsuffering.Phouse;
 				PRODUCT_NAME = Phouse;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-/* End XCBuildConfiguation section */
+/* End XCBuildConfiguration section */
 
-/* Begin XCConfiguationList section */
-		170219C720EFCBAE0072ADE0 /* Build configuation list fo PBXPoject "Phouse" */ = {
-			isa = XCConfiguationList;
-			buildConfiguations = (
+/* Begin XCConfigurationList section */
+		170219C720EFCBAE0072ADE0 /* Build configuration list for PBXProject "Phouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
 				170219FB20EFCBB00072ADE0 /* Debug */,
 				170219FC20EFCBB00072ADE0 /* Release */,
 			);
-			defaultConfiguationIsVisible = 0;
-			defaultConfiguationName = Release;
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		170219FD20EFCBB00072ADE0 /* Build configuation list fo PBXNativeTaget "Phouse iOS" */ = {
-			isa = XCConfiguationList;
-			buildConfiguations = (
+		170219FD20EFCBB00072ADE0 /* Build configuration list for PBXNativeTarget "Phouse iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
 				170219FE20EFCBB00072ADE0 /* Debug */,
 				170219FF20EFCBB00072ADE0 /* Release */,
 			);
-			defaultConfiguationIsVisible = 0;
-			defaultConfiguationName = Release;
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		17021A0020EFCBB00072ADE0 /* Build configuation list fo PBXNativeTaget "Phouse macOS" */ = {
-			isa = XCConfiguationList;
-			buildConfiguations = (
+		17021A0020EFCBB00072ADE0 /* Build configuration list for PBXNativeTarget "Phouse macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
 				17021A0120EFCBB00072ADE0 /* Debug */,
 				17021A0220EFCBB00072ADE0 /* Release */,
 			);
-			defaultConfiguationIsVisible = 0;
-			defaultConfiguationName = Release;
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-/* End XCConfiguationList section */
+/* End XCConfigurationList section */
 	};
-	ootObject = 170219C420EFCBAE0072ADE0 /* Poject object */;
+	rootObject = 170219C420EFCBAE0072ADE0 /* Project object */;
 }

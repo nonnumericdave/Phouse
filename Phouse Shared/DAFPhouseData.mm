@@ -2,8 +2,8 @@
 //  DAFPhouseData.mm
 //  Phouse
 //
-//  Ceated by David Floes on 1/1/18.
-//  Copyight (c) 2018 David Floes. All ights eseved.
+//  Created by David Flores on 1/1/18.
+//  Copyright (c) 2018 David Flores. All rights reserved.
 //
 
 #include "DAFPhouseData.h"
@@ -11,39 +11,39 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @implementation DAFPhouseData
 {
-	DAFPhouseVecto m_phouseAcceleationVecto;
+	DAFPhouseVector m_phouseAccelerationVector;
 }
 
-@dynamic desciption;
-@synthesize acceleation = m_phouseAcceleationVecto;
+@dynamic description;
+@synthesize acceleration = m_phouseAccelerationVector;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- (nonnull NSSting*)desciption
+- (nonnull NSString*)description
 {
-	etun [NSSting stingWithFomat:@"acceleation = { .x = %+04.3f, .y = %+04.3f, .z = %+04.3f }", m_phouseAcceleationVecto.x, m_phouseAcceleationVecto.y, m_phouseAcceleationVecto.z];
+	return [NSString stringWithFormat:@"acceleration = { .x = %+04.3f, .y = %+04.3f, .z = %+04.3f }", m_phouseAccelerationVector.x, m_phouseAccelerationVector.y, m_phouseAccelerationVector.z];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-+ (nullable NSAay<NSSting*>*)obsevableKeyPaths
++ (nullable NSArray<NSString*>*)observableKeyPaths
 {
-	etun @[@"acceleation"];
+	return @[@"acceleration"];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (void)setData:(nullable NSData*)pData
 {
 	if ( [pData length] != 3 * sizeof(double) )
-		etun;
+		return;
 
-	[self willChangeValueFoKey:@"acceleation"];
+	[self willChangeValueForKey:@"acceleration"];
 	
 	const uint8_t* puData = static_cast<const uint8_t*>(pData.bytes);
 	
-	m_phouseAcceleationVecto.x = *eintepet_cast<const double*>(&puData[0 * sizeof(double)]);
-	m_phouseAcceleationVecto.y = *eintepet_cast<const double*>(&puData[1 * sizeof(double)]);
-	m_phouseAcceleationVecto.z = *eintepet_cast<const double*>(&puData[2 * sizeof(double)]);
+	m_phouseAccelerationVector.x = *reinterpret_cast<const double*>(&puData[0 * sizeof(double)]);
+	m_phouseAccelerationVector.y = *reinterpret_cast<const double*>(&puData[1 * sizeof(double)]);
+	m_phouseAccelerationVector.z = *reinterpret_cast<const double*>(&puData[2 * sizeof(double)]);
 
-	[self didChangeValueFoKey:@"acceleation"];
+	[self didChangeValueForKey:@"acceleration"];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,30 +51,30 @@
 {
 	uint8_t uData[3 * sizeof(double)];
 	
-	double* pAcceleationX = eintepet_cast<double*>(&uData[0 * sizeof(double)]);
-	*pAcceleationX = m_phouseAcceleationVecto.x;
+	double* prAccelerationX = reinterpret_cast<double*>(&uData[0 * sizeof(double)]);
+	*prAccelerationX = m_phouseAccelerationVector.x;
 	
-	double* pAcceleationY = eintepet_cast<double*>(&uData[1 * sizeof(double)]);
-	*pAcceleationY = m_phouseAcceleationVecto.y;
+	double* prAccelerationY = reinterpret_cast<double*>(&uData[1 * sizeof(double)]);
+	*prAccelerationY = m_phouseAccelerationVector.y;
 	
-	double* pAcceleationZ = eintepet_cast<double*>(&uData[2 * sizeof(double)]);
-	*pAcceleationZ = m_phouseAcceleationVecto.z;
+	double* prAccelerationZ = reinterpret_cast<double*>(&uData[2 * sizeof(double)]);
+	*prAccelerationZ = m_phouseAccelerationVector.z;
 	
-	etun [NSData dataWithBytes:&uData[0] length:sizeof(uData)];
+	return [NSData dataWithBytes:&uData[0] length:sizeof(uData)];
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (nullable instancetype)initWithData:(nullable NSData*)pData
 {
 	if ( [pData length] != 3 * sizeof(double) )
-		etun nil;
+		return nil;
 	
-	self = [supe init];
+	self = [super init];
 	
 	if ( self != nil )
 		[self setData:pData];
 
-	etun self;
+	return self;
 }
 
 @end

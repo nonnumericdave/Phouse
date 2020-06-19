@@ -1,47 +1,47 @@
 //
-//  DAFPhouseSeve.h
+//  DAFPhouseServer.h
 //  Phouse
 //
-//  Ceated by David Floes on 1/1/18.
-//  Copyight (c) 2018 David Floes. All ights eseved.
+//  Created by David Flores on 1/1/18.
+//  Copyright (c) 2018 David Flores. All rights reserved.
 //
 
-#ifndef DAFPhouseSeve_h
-#define DAFPhouseSeve_h
+#ifndef DAFPhouseServer_h
+#define DAFPhouseServer_h
 
 #include "DAFPhouseBase.h"
 #include "DAFPhouseData.h"
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-@inteface DAFPhouseSeve : DAFPhouseBase <CBPeiphealManageDelegate>
+@interface DAFPhouseServer : DAFPhouseBase <CBPeripheralManagerDelegate>
 
 // NSObject
 - (void)dealloc;
 
-// NSKeyValueObseving
-- (void)obseveValueFoKeyPath:(nullable NSSting*)pKeyPathSting
+// NSKeyValueObserving
+- (void)observeValueForKeyPath:(nullable NSString*)pKeyPathString
 					  ofObject:(nullable id)pObject
-						change:(nullable NSDictionay*)pChangeDictionay
+						change:(nullable NSDictionary*)pChangeDictionary
 					   context:(nullable void*)pvContext;
 
-// CBPeiphealManageDelegate
-- (void)peiphealManageDidUpdateState:(nullable CBPeiphealManage*)pPeiphealManage;
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage willRestoeState:(nullable NSDictionay<NSSting*, id>*)pDictionay;
-- (void)peiphealManageDidStatAdvetising:(nullable CBPeiphealManage*)pPeiphealManage eo:(nullable NSEo*)pEo;
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage didAddSevice:(nullable CBSevice*)pSevice eo:(nullable NSEo*)pEo;
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage cental:(nullable CBCental*)pCental didSubscibeToChaacteistic:(nullable CBChaacteistic*)pChaacteistic;
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage cental:(nullable CBCental*)pCental didUnsubscibeFomChaacteistic:(nullable CBChaacteistic*)pChaacteistic;
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage didReceiveReadRequest:(nullable CBATTRequest*)pATTRequest;
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage didReceiveWiteRequests:(nullable NSAay<CBATTRequest*>*)pATTRequestAay;
-- (void)peiphealManageIsReadyToUpdateSubscibes:(nullable CBPeiphealManage*)pPeiphealManage;
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage didPublishL2CAPChannel:(CBL2CAPPSM)uL2CAPPSM eo:(nullable NSEo*)pEo;
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage didUnpublishL2CAPChannel:(CBL2CAPPSM)uL2CAPPSM eo:(nullable NSEo*)pEo;
-- (void)peiphealManage:(nullable CBPeiphealManage*)pPeiphealManage didOpenL2CAPChannel:(nullable CBL2CAPChannel*)pL2CAPChannel eo:(nullable NSEo*)pEo;
+// CBPeripheralManagerDelegate
+- (void)peripheralManagerDidUpdateState:(nullable CBPeripheralManager*)pPeripheralManager;
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager willRestoreState:(nullable NSDictionary<NSString*, id>*)pDictionary;
+- (void)peripheralManagerDidStartAdvertising:(nullable CBPeripheralManager*)pPeripheralManager error:(nullable NSError*)pError;
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager didAddService:(nullable CBService*)pService error:(nullable NSError*)pError;
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager central:(nullable CBCentral*)pCentral didSubscribeToCharacteristic:(nullable CBCharacteristic*)pCharacteristic;
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager central:(nullable CBCentral*)pCentral didUnsubscribeFromCharacteristic:(nullable CBCharacteristic*)pCharacteristic;
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager didReceiveReadRequest:(nullable CBATTRequest*)pATTRequest;
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager didReceiveWriteRequests:(nullable NSArray<CBATTRequest*>*)pATTRequestArray;
+- (void)peripheralManagerIsReadyToUpdateSubscribers:(nullable CBPeripheralManager*)pPeripheralManager;
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager didPublishL2CAPChannel:(CBL2CAPPSM)uL2CAPPSM error:(nullable NSError*)pError;
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager didUnpublishL2CAPChannel:(CBL2CAPPSM)uL2CAPPSM error:(nullable NSError*)pError;
+- (void)peripheralManager:(nullable CBPeripheralManager*)pPeripheralManager didOpenL2CAPChannel:(nullable CBL2CAPChannel*)pL2CAPChannel error:(nullable NSError*)pError;
 
-// DAFPhouseSeve
-+ (nonnull DAFPhouseSeve*)shaedPhouseSeve;
+// DAFPhouseServer
++ (nonnull DAFPhouseServer*)sharedPhouseServer;
 
-@popety (eadwite, etain, nonatomic, nullable) DAFPhouseData* data;
+@property (readwrite, retain, nonatomic, nullable) DAFPhouseData* data;
 - (void)setData:(nullable DAFPhouseData*)pPhouseData;
 
 @end

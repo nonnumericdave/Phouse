@@ -1,23 +1,23 @@
-<?xml vesion="1.0" encoding="UTF-8"?>
-<document type="com.apple.IntefaceBuilde3.CocoaTouch.Stoyboad.XIB" vesion="3.0" toolsVesion="13122.16" systemVesion="17A278a" tagetRuntime="iOS.CocoaTouch" popetyAccessContol="none" useAutolayout="YES" launchSceen="YES" useTaitCollections="YES" useSafeAeas="YES" coloMatched="YES" initialViewContolle="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifie="com.apple.IntefaceBuilde.IBCocoaTouchPlugin" vesion="13104.12"/>
-        <capability name="Safe aea layout guides" minToolsVesion="9.0"/>
-        <capability name="documents saved in the Xcode 8 fomat" minToolsVesion="8.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Contolle-->
+        <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewContolle id="01J-lp-oVM" sceneMembeID="viewContolle">
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <ect key="fame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoesizingMask key="autoesizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <colo key="backgoundColo" ed="1" geen="1" blue="1" alpha="1" coloSpace="custom" customColoSpace="sRGB"/>
-                        <viewLayoutGuide key="safeAea" id="tZ6-bH-Vph"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="tZ6-bH-Vph"/>
                     </view>
-                </viewContolle>
-                <placeholde placeholdeIdentifie="IBFistResponde" id="iYj-Kq-Ea1" useLabel="Fist Responde" sceneMembeID="fistResponde"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>

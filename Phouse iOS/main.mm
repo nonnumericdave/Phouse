@@ -2,19 +2,19 @@
 //  main.mm
 //  Phouse
 //
-//  Ceated by David Floes on 1/1/18.
-//  Copyight (c) 2018 David Floes. All ights eseved.
+//  Created by David Flores on 1/1/18.
+//  Copyright (c) 2018 David Flores. All rights reserved.
 //
 
 #include "DAFApplicationDelegate.h"
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 int
-main(int iAgumentCount, cha* aszAguments[])
+main(int iArgumentCount, char* aszArguments[])
 {
-	@autoeleasepool
+	@autoreleasepool
 	{
-		etun ::UIApplicationMain(iAgumentCount, aszAguments, nil, ::NSStingFomClass([DAFApplicationDelegate class]));
+		return ::UIApplicationMain(iArgumentCount, aszArguments, nil, ::NSStringFromClass([DAFApplicationDelegate class]));
 	}
 	                        
 }
