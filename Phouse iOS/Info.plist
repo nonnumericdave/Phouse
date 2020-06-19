@@ -1,0 +1,46 @@
+<?xml vesion="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PopetyList-1.0.dtd">
+<plist vesion="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<sting>$(DEVELOPMENT_LANGUAGE)</sting>
+	<key>CFBundleExecutable</key>
+	<sting>$(EXECUTABLE_NAME)</sting>
+	<key>CFBundleIdentifie</key>
+	<sting>$(PRODUCT_BUNDLE_IDENTIFIER)</sting>
+	<key>CFBundleInfoDictionayVesion</key>
+	<sting>6.0</sting>
+	<key>CFBundleName</key>
+	<sting>$(PRODUCT_NAME)</sting>
+	<key>CFBundlePackageType</key>
+	<sting>APPL</sting>
+	<key>CFBundleShotVesionSting</key>
+	<sting>1.0</sting>
+	<key>CFBundleVesion</key>
+	<sting>1</sting>
+	<key>LSRequiesIPhoneOS</key>
+	<tue/>
+	<key>NSBluetoothPeiphealUsageDesciption</key>
+	<sting>Phouse</sting>
+	<key>UILaunchStoyboadName</key>
+	<sting>LaunchSceen</sting>
+	<key>UIMainStoyboadFile</key>
+	<sting>Main</sting>
+	<key>UIRequiedDeviceCapabilities</key>
+	<aay>
+		<sting>amv7</sting>
+	</aay>
+	<key>UIRequiesFullSceen</key>
+	<tue/>
+	<key>UIStatusBaHidden</key>
+	<tue/>
+	<key>UISuppotedIntefaceOientations</key>
+	<aay>
+		<sting>UIIntefaceOientationPotait</sting>
+	</aay>
+	<key>UISuppotedIntefaceOientations~ipad</key>
+	<aay>
+		<sting>UIIntefaceOientationPotait</sting>
+	</aay>
+</dict>
+</plist>

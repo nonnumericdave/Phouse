@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	achiveVesion = 1;
+	classes = {
+	};
+	objectVesion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		170219D620EFCBB00072ADE0 /* DAFApplicationDelegate.mm in Souces */ = {isa = PBXBuildFile; fileRef = 170219D520EFCBB00072ADE0 /* DAFApplicationDelegate.mm */; };
+		170219D920EFCBB00072ADE0 /* DAFViewContolle.mm in Souces */ = {isa = PBXBuildFile; fileRef = 170219D820EFCBB00072ADE0 /* DAFViewContolle.mm */; };
+		170219DC20EFCBB00072ADE0 /* Main.stoyboad in Resouces */ = {isa = PBXBuildFile; fileRef = 170219DA20EFCBB00072ADE0 /* Main.stoyboad */; };
+		170219DF20EFCBB00072ADE0 /* LaunchSceen.stoyboad in Resouces */ = {isa = PBXBuildFile; fileRef = 170219DD20EFCBB00072ADE0 /* LaunchSceen.stoyboad */; };
+		170219E220EFCBB00072ADE0 /* main.mm in Souces */ = {isa = PBXBuildFile; fileRef = 170219E120EFCBB00072ADE0 /* main.mm */; };
+		170219EB20EFCBB00072ADE0 /* DAFApplicationDelegate.mm in Souces */ = {isa = PBXBuildFile; fileRef = 170219EA20EFCBB00072ADE0 /* DAFApplicationDelegate.mm */; };
+		170219EE20EFCBB00072ADE0 /* DAFViewContolle.mm in Souces */ = {isa = PBXBuildFile; fileRef = 170219ED20EFCBB00072ADE0 /* DAFViewContolle.mm */; };
+		170219F120EFCBB00072ADE0 /* Main.stoyboad in Resouces */ = {isa = PBXBuildFile; fileRef = 170219EF20EFCBB00072ADE0 /* Main.stoyboad */; };
+		170219F420EFCBB00072ADE0 /* main.mm in Souces */ = {isa = PBXBuildFile; fileRef = 170219F320EFCBB00072ADE0 /* main.mm */; };
+		170219F920EFCBB00072ADE0 /* Assets.xcassets in Resouces */ = {isa = PBXBuildFile; fileRef = 170219CC20EFCBB00072ADE0 /* Assets.xcassets */; };
+		170219FA20EFCBB00072ADE0 /* Assets.xcassets in Resouces */ = {isa = PBXBuildFile; fileRef = 170219CC20EFCBB00072ADE0 /* Assets.xcassets */; };
+		17021A0520EFD91A0072ADE0 /* UIKit.famewok in Famewoks */ = {isa = PBXBuildFile; fileRef = 17021A0420EFD91A0072ADE0 /* UIKit.famewok */; };
+		17021A0720EFD9680072ADE0 /* AppKit.famewok in Famewoks */ = {isa = PBXBuildFile; fileRef = 17021A0620EFD9680072ADE0 /* AppKit.famewok */; };
+		171F1FF420F96081001836F6 /* CoeMotion.famewok in Famewoks */ = {isa = PBXBuildFile; fileRef = 171F1FF320F96081001836F6 /* CoeMotion.famewok */; };
+		1788CF0F20F00795004662AA /* CoeBluetooth.famewok in Famewoks */ = {isa = PBXBuildFile; fileRef = 1788CF0E20F00795004662AA /* CoeBluetooth.famewok */; };
+		1788CF1120F007A0004662AA /* CoeBluetooth.famewok in Famewoks */ = {isa = PBXBuildFile; fileRef = 1788CF1020F007A0004662AA /* CoeBluetooth.famewok */; };
+		1788CF1420F00BB9004662AA /* DAFPhouseClient.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788CF1320F00BB9004662AA /* DAFPhouseClient.mm */; };
+		1788CF1720F00C1C004662AA /* DAFPhouseSeve.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788CF1620F00C1C004662AA /* DAFPhouseSeve.mm */; };
+		1788CF1820F00C8E004662AA /* DAFPhouseClient.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788CF1320F00BB9004662AA /* DAFPhouseClient.mm */; };
+		1788CF1920F00C8E004662AA /* DAFPhouseSeve.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788CF1620F00C1C004662AA /* DAFPhouseSeve.mm */; };
+		1788D01B20F0118A004662AA /* DAFPhouseBase.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788D01A20F0118A004662AA /* DAFPhouseBase.mm */; };
+		1788D01C20F01252004662AA /* DAFPhouseBase.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788D01A20F0118A004662AA /* DAFPhouseBase.mm */; };
+		1788D01F20F42363004662AA /* DAFPhouseData.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788D01E20F42363004662AA /* DAFPhouseData.mm */; };
+		1788D02120F42F7A004662AA /* DAFPhouseData.mm in Souces */ = {isa = PBXBuildFile; fileRef = 1788D01E20F42363004662AA /* DAFPhouseData.mm */; };
+		17E6DEED20FE45D300CA99F8 /* CoeGaphics.famewok in Famewoks */ = {isa = PBXBuildFile; fileRef = 17E6DEEC20FE45D300CA99F8 /* CoeGaphics.famewok */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileRefeence section */
+		170219CC20EFCBB00072ADE0 /* Assets.xcassets */ = {isa = PBXFileRefeence; lastKnownFileType = folde.assetcatalog; path = Assets.xcassets; souceTee = "<goup>"; };
+		170219D120EFCBB00072ADE0 /* Phouse.app */ = {isa = PBXFileRefeence; explicitFileType = wappe.application; includeInIndex = 0; path = Phouse.app; souceTee = BUILT_PRODUCTS_DIR; };
+		170219D420EFCBB00072ADE0 /* DAFApplicationDelegate.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFApplicationDelegate.h; souceTee = "<goup>"; };
+		170219D520EFCBB00072ADE0 /* DAFApplicationDelegate.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFApplicationDelegate.mm; souceTee = "<goup>"; };
+		170219D720EFCBB00072ADE0 /* DAFViewContolle.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFViewContolle.h; souceTee = "<goup>"; };
+		170219D820EFCBB00072ADE0 /* DAFViewContolle.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFViewContolle.mm; souceTee = "<goup>"; };
+		170219DB20EFCBB00072ADE0 /* Base */ = {isa = PBXFileRefeence; lastKnownFileType = file.stoyboad; name = Base; path = Base.lpoj/Main.stoyboad; souceTee = "<goup>"; };
+		170219DE20EFCBB00072ADE0 /* Base */ = {isa = PBXFileRefeence; lastKnownFileType = file.stoyboad; name = Base; path = Base.lpoj/LaunchSceen.stoyboad; souceTee = "<goup>"; };
+		170219E020EFCBB00072ADE0 /* Info.plist */ = {isa = PBXFileRefeence; lastKnownFileType = text.plist.xml; path = Info.plist; souceTee = "<goup>"; };
+		170219E120EFCBB00072ADE0 /* main.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = main.mm; souceTee = "<goup>"; };
+		170219E720EFCBB00072ADE0 /* Phouse.app */ = {isa = PBXFileRefeence; explicitFileType = wappe.application; includeInIndex = 0; path = Phouse.app; souceTee = BUILT_PRODUCTS_DIR; };
+		170219E920EFCBB00072ADE0 /* DAFApplicationDelegate.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFApplicationDelegate.h; souceTee = "<goup>"; };
+		170219EA20EFCBB00072ADE0 /* DAFApplicationDelegate.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFApplicationDelegate.mm; souceTee = "<goup>"; };
+		170219EC20EFCBB00072ADE0 /* DAFViewContolle.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFViewContolle.h; souceTee = "<goup>"; };
+		170219ED20EFCBB00072ADE0 /* DAFViewContolle.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFViewContolle.mm; souceTee = "<goup>"; };
+		170219F020EFCBB00072ADE0 /* Base */ = {isa = PBXFileRefeence; lastKnownFileType = file.stoyboad; name = Base; path = Base.lpoj/Main.stoyboad; souceTee = "<goup>"; };
+		170219F220EFCBB00072ADE0 /* Info.plist */ = {isa = PBXFileRefeence; lastKnownFileType = text.plist.xml; path = Info.plist; souceTee = "<goup>"; };
+		170219F320EFCBB00072ADE0 /* main.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = main.mm; souceTee = "<goup>"; };
+		17021A0420EFD91A0072ADE0 /* UIKit.famewok */ = {isa = PBXFileRefeence; lastKnownFileType = wappe.famewok; name = UIKit.famewok; path = Platfoms/iPhoneOS.platfom/Develope/SDKs/iPhoneOS11.4.sdk/System/Libay/Famewoks/UIKit.famewok; souceTee = DEVELOPER_DIR; };
+		17021A0620EFD9680072ADE0 /* AppKit.famewok */ = {isa = PBXFileRefeence; lastKnownFileType = wappe.famewok; name = AppKit.famewok; path = System/Libay/Famewoks/AppKit.famewok; souceTee = SDKROOT; };
+		17021A0820EFDE620072ADE0 /* Phouse.pch */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = Phouse.pch; souceTee = "<goup>"; };
+		17021A0920EFDF490072ADE0 /* Phouse.pch */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = Phouse.pch; souceTee = "<goup>"; };
+		171F1FF320F96081001836F6 /* CoeMotion.famewok */ = {isa = PBXFileRefeence; lastKnownFileType = wappe.famewok; name = CoeMotion.famewok; path = Platfoms/iPhoneOS.platfom/Develope/SDKs/iPhoneOS12.0.sdk/System/Libay/Famewoks/CoeMotion.famewok; souceTee = DEVELOPER_DIR; };
+		1788CF0E20F00795004662AA /* CoeBluetooth.famewok */ = {isa = PBXFileRefeence; lastKnownFileType = wappe.famewok; name = CoeBluetooth.famewok; path = Platfoms/iPhoneOS.platfom/Develope/SDKs/iPhoneOS11.4.sdk/System/Libay/Famewoks/CoeBluetooth.famewok; souceTee = DEVELOPER_DIR; };
+		1788CF1020F007A0004662AA /* CoeBluetooth.famewok */ = {isa = PBXFileRefeence; lastKnownFileType = wappe.famewok; name = CoeBluetooth.famewok; path = System/Libay/Famewoks/CoeBluetooth.famewok; souceTee = SDKROOT; };
+		1788CF1220F00BB9004662AA /* DAFPhouseClient.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFPhouseClient.h; souceTee = "<goup>"; };
+		1788CF1320F00BB9004662AA /* DAFPhouseClient.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFPhouseClient.mm; souceTee = "<goup>"; };
+		1788CF1520F00C1C004662AA /* DAFPhouseSeve.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFPhouseSeve.h; souceTee = "<goup>"; };
+		1788CF1620F00C1C004662AA /* DAFPhouseSeve.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFPhouseSeve.mm; souceTee = "<goup>"; };
+		1788D01920F0118A004662AA /* DAFPhouseBase.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFPhouseBase.h; souceTee = "<goup>"; };
+		1788D01A20F0118A004662AA /* DAFPhouseBase.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFPhouseBase.mm; souceTee = "<goup>"; };
+		1788D01D20F42363004662AA /* DAFPhouseData.h */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.c.h; path = DAFPhouseData.h; souceTee = "<goup>"; };
+		1788D01E20F42363004662AA /* DAFPhouseData.mm */ = {isa = PBXFileRefeence; lastKnownFileType = soucecode.cpp.objcpp; path = DAFPhouseData.mm; souceTee = "<goup>"; };
+		17E6DEEC20FE45D300CA99F8 /* CoeGaphics.famewok */ = {isa = PBXFileRefeence; lastKnownFileType = wappe.famewok; name = CoeGaphics.famewok; path = System/Libay/Famewoks/CoeGaphics.famewok; souceTee = SDKROOT; };
+/* End PBXFileRefeence section */
+
+/* Begin PBXFamewoksBuildPhase section */
+		170219CE20EFCBB00072ADE0 /* Famewoks */ = {
+			isa = PBXFamewoksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1788CF0F20F00795004662AA /* CoeBluetooth.famewok in Famewoks */,
+				171F1FF420F96081001836F6 /* CoeMotion.famewok in Famewoks */,
+				17021A0520EFD91A0072ADE0 /* UIKit.famewok in Famewoks */,
+			);
+			unOnlyFoDeploymentPostpocessing = 0;
+		};
+		170219E420EFCBB00072ADE0 /* Famewoks */ = {
+			isa = PBXFamewoksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17021A0720EFD9680072ADE0 /* AppKit.famewok in Famewoks */,
+				1788CF1120F007A0004662AA /* CoeBluetooth.famewok in Famewoks */,
+				17E6DEED20FE45D300CA99F8 /* CoeGaphics.famewok in Famewoks */,
+			);
+			unOnlyFoDeploymentPostpocessing = 0;
+		};
+/* End PBXFamewoksBuildPhase section */
+
+/* Begin PBXGoup section */
+		170219C320EFCBAE0072ADE0 = {
+			isa = PBXGoup;
+			childen = (
+				170219C820EFCBAF0072ADE0 /* Phouse Shaed */,
+				170219D320EFCBB00072ADE0 /* Phouse iOS */,
+				170219E820EFCBB00072ADE0 /* Phouse macOS */,
+				170219D220EFCBB00072ADE0 /* Poducts */,
+				17021A0320EFD91A0072ADE0 /* Famewoks */,
+			);
+			souceTee = "<goup>";
+		};
+		170219C820EFCBAF0072ADE0 /* Phouse Shaed */ = {
+			isa = PBXGoup;
+			childen = (
+				170219CC20EFCBB00072ADE0 /* Assets.xcassets */,
+				1788D01920F0118A004662AA /* DAFPhouseBase.h */,
+				1788D01A20F0118A004662AA /* DAFPhouseBase.mm */,
+				1788CF1220F00BB9004662AA /* DAFPhouseClient.h */,
+				1788CF1320F00BB9004662AA /* DAFPhouseClient.mm */,
+				1788D01D20F42363004662AA /* DAFPhouseData.h */,
+				1788D01E20F42363004662AA /* DAFPhouseData.mm */,
+				1788CF1520F00C1C004662AA /* DAFPhouseSeve.h */,
+				1788CF1620F00C1C004662AA /* DAFPhouseSeve.mm */,
+			);
+			path = "Phouse Shaed";
+			souceTee = "<goup>";
+		};
+		170219D220EFCBB00072ADE0 /* Poducts */ = {
+			isa = PBXGoup;
+			childen = (
+				170219D120EFCBB00072ADE0 /* Phouse.app */,
+				170219E720EFCBB00072ADE0 /* Phouse.app */,
+			);
+			name = Poducts;
+			souceTee = "<goup>";
+		};
+		170219D320EFCBB00072ADE0 /* Phouse iOS */ = {
+			isa = PBXGoup;
+			childen = (
+				170219E020EFCBB00072ADE0 /* Info.plist */,
+				170219DD20EFCBB00072ADE0 /* LaunchSceen.stoyboad */,
+				170219E120EFCBB00072ADE0 /* main.mm */,
+				170219DA20EFCBB00072ADE0 /* Main.stoyboad */,
+				17021A0820EFDE620072ADE0 /* Phouse.pch */,
+				170219D420EFCBB00072ADE0 /* DAFApplicationDelegate.h */,
+				170219D520EFCBB00072ADE0 /* DAFApplicationDelegate.mm */,
+				170219D720EFCBB00072ADE0 /* DAFViewContolle.h */,
+				170219D820EFCBB00072ADE0 /* DAFViewContolle.mm */,
+			);
+			path = "Phouse iOS";
+			souceTee = "<goup>";
+		};
+		170219E820EFCBB00072ADE0 /* Phouse macOS */ = {
+			isa = PBXGoup;
+			childen = (
+				170219F220EFCBB00072ADE0 /* Info.plist */,
+				170219F320EFCBB00072ADE0 /* main.mm */,
+				170219EF20EFCBB00072ADE0 /* Main.stoyboad */,
+				17021A0920EFDF490072ADE0 /* Phouse.pch */,
+				170219E920EFCBB00072ADE0 /* DAFApplicationDelegate.h */,
+				170219EA20EFCBB00072ADE0 /* DAFApplicationDelegate.mm */,
+				170219EC20EFCBB00072ADE0 /* DAFViewContolle.h */,
+				170219ED20EFCBB00072ADE0 /* DAFViewContolle.mm */,
+			);
+			path = "Phouse macOS";
+			souceTee = "<goup>";
+		};
+		17021A0320EFD91A0072ADE0 /* Famewoks */ = {
+			isa = PBXGoup;
+			childen = (
+				17021A0620EFD9680072ADE0 /* AppKit.famewok */,
+				17E6DEEC20FE45D300CA99F8 /* CoeGaphics.famewok */,
+				1788CF0E20F00795004662AA /* CoeBluetooth.famewok */,
+				1788CF1020F007A0004662AA /* CoeBluetooth.famewok */,
+				171F1FF320F96081001836F6 /* CoeMotion.famewok */,
+				17021A0420EFD91A0072ADE0 /* UIKit.famewok */,
+			);
+			name = Famewoks;
+			souceTee = "<goup>";
+		};
+/* End PBXGoup section */
+
+/* Begin PBXNativeTaget section */
+		170219D020EFCBB00072ADE0 /* Phouse iOS */ = {
+			isa = PBXNativeTaget;
+			buildConfiguationList = 170219FD20EFCBB00072ADE0 /* Build configuation list fo PBXNativeTaget "Phouse iOS" */;
+			buildPhases = (
+				170219CD20EFCBB00072ADE0 /* Souces */,
+				170219CE20EFCBB00072ADE0 /* Famewoks */,
+				170219CF20EFCBB00072ADE0 /* Resouces */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Phouse iOS";
+			poductName = "Phouse iOS";
+			poductRefeence = 170219D120EFCBB00072ADE0 /* Phouse.app */;
+			poductType = "com.apple.poduct-type.application";
+		};
+		170219E620EFCBB00072ADE0 /* Phouse macOS */ = {
+			isa = PBXNativeTaget;
+			buildConfiguationList = 17021A0020EFCBB00072ADE0 /* Build configuation list fo PBXNativeTaget "Phouse macOS" */;
+			buildPhases = (
+				170219E320EFCBB00072ADE0 /* Souces */,
+				170219E420EFCBB00072ADE0 /* Famewoks */,
+				170219E520EFCBB00072ADE0 /* Resouces */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Phouse macOS";
+			poductName = "Phouse macOS";
+			poductRefeence = 170219E720EFCBB00072ADE0 /* Phouse.app */;
+			poductType = "com.apple.poduct-type.application";
+		};
+/* End PBXNativeTaget section */
+
+/* Begin PBXPoject section */
+		170219C420EFCBAE0072ADE0 /* Poject object */ = {
+			isa = PBXPoject;
+			attibutes = {
+				LastUpgadeCheck = 0940;
+				ORGANIZATIONNAME = "David Floes";
+				TagetAttibutes = {
+					170219D020EFCBB00072ADE0 = {
+						CeatedOnToolsVesion = 9.4;
+					};
+					170219E620EFCBB00072ADE0 = {
+						CeatedOnToolsVesion = 9.4;
+					};
+				};
+			};
+			buildConfiguationList = 170219C720EFCBAE0072ADE0 /* Build configuation list fo PBXPoject "Phouse" */;
+			compatibilityVesion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedFoEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGoup = 170219C320EFCBAE0072ADE0;
+			poductRefGoup = 170219D220EFCBB00072ADE0 /* Poducts */;
+			pojectDiPath = "";
+			pojectRoot = "";
+			tagets = (
+				170219D020EFCBB00072ADE0 /* Phouse iOS */,
+				170219E620EFCBB00072ADE0 /* Phouse macOS */,
+			);
+		};
+/* End PBXPoject section */
+
+/* Begin PBXResoucesBuildPhase section */
+		170219CF20EFCBB00072ADE0 /* Resouces */ = {
+			isa = PBXResoucesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170219DC20EFCBB00072ADE0 /* Main.stoyboad in Resouces */,
+				170219DF20EFCBB00072ADE0 /* LaunchSceen.stoyboad in Resouces */,
+				170219F920EFCBB00072ADE0 /* Assets.xcassets in Resouces */,
+			);
+			unOnlyFoDeploymentPostpocessing = 0;
+		};
+		170219E520EFCBB00072ADE0 /* Resouces */ = {
+			isa = PBXResoucesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170219F120EFCBB00072ADE0 /* Main.stoyboad in Resouces */,
+				170219FA20EFCBB00072ADE0 /* Assets.xcassets in Resouces */,
+			);
+			unOnlyFoDeploymentPostpocessing = 0;
+		};
+/* End PBXResoucesBuildPhase section */
+
+/* Begin PBXSoucesBuildPhase section */
+		170219CD20EFCBB00072ADE0 /* Souces */ = {
+			isa = PBXSoucesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170219E220EFCBB00072ADE0 /* main.mm in Souces */,
+				170219D620EFCBB00072ADE0 /* DAFApplicationDelegate.mm in Souces */,
+				1788D01B20F0118A004662AA /* DAFPhouseBase.mm in Souces */,
+				1788CF1420F00BB9004662AA /* DAFPhouseClient.mm in Souces */,
+				1788D01F20F42363004662AA /* DAFPhouseData.mm in Souces */,
+				1788CF1720F00C1C004662AA /* DAFPhouseSeve.mm in Souces */,
+				170219D920EFCBB00072ADE0 /* DAFViewContolle.mm in Souces */,
+			);
+			unOnlyFoDeploymentPostpocessing = 0;
+		};
+		170219E320EFCBB00072ADE0 /* Souces */ = {
+			isa = PBXSoucesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170219F420EFCBB00072ADE0 /* main.mm in Souces */,
+				170219EB20EFCBB00072ADE0 /* DAFApplicationDelegate.mm in Souces */,
+				1788D01C20F01252004662AA /* DAFPhouseBase.mm in Souces */,
+				1788CF1820F00C8E004662AA /* DAFPhouseClient.mm in Souces */,
+				1788D02120F42F7A004662AA /* DAFPhouseData.mm in Souces */,
+				1788CF1920F00C8E004662AA /* DAFPhouseSeve.mm in Souces */,
+				170219EE20EFCBB00072ADE0 /* DAFViewContolle.mm in Souces */,
+			);
+			unOnlyFoDeploymentPostpocessing = 0;
+		};
+/* End PBXSoucesBuildPhase section */
+
+/* Begin PBXVaiantGoup section */
+		170219DA20EFCBB00072ADE0 /* Main.stoyboad */ = {
+			isa = PBXVaiantGoup;
+			childen = (
+				170219DB20EFCBB00072ADE0 /* Base */,
+			);
+			name = Main.stoyboad;
+			souceTee = "<goup>";
+		};
+		170219DD20EFCBB00072ADE0 /* LaunchSceen.stoyboad */ = {
+			isa = PBXVaiantGoup;
+			childen = (
+				170219DE20EFCBB00072ADE0 /* Base */,
+			);
+			name = LaunchSceen.stoyboad;
+			souceTee = "<goup>";
+		};
+		170219EF20EFCBB00072ADE0 /* Main.stoyboad */ = {
+			isa = PBXVaiantGoup;
+			childen = (
+				170219F020EFCBB00072ADE0 /* Base */,
+			);
+			name = Main.stoyboad;
+			souceTee = "<goup>";
+		};
+/* End PBXVaiantGoup section */
+
+/* Begin XCBuildConfiguation section */
+		170219FB20EFCBB00072ADE0 /* Debug */ = {
+			isa = XCBuildConfiguation;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwaf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inheited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		170219FC20EFCBB00072ADE0 /* Release */ = {
+			isa = XCBuildConfiguation;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwaf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		170219FE20EFCBB00072ADE0 /* Debug */ = {
+			isa = XCBuildConfiguation;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Develope";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9M229JAFBZ;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Phouse iOS/Phouse.pch";
+				INFOPLIST_FILE = "Phouse iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inheited)",
+					"@executable_path/Famewoks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.playingandsuffeing.Phouse;
+				PRODUCT_NAME = Phouse;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		170219FF20EFCBB00072ADE0 /* Release */ = {
+			isa = XCBuildConfiguation;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Develope";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9M229JAFBZ;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Phouse iOS/Phouse.pch";
+				INFOPLIST_FILE = "Phouse iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inheited)",
+					"@executable_path/Famewoks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.playingandsuffeing.Phouse;
+				PRODUCT_NAME = Phouse;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17021A0120EFCBB00072ADE0 /* Debug */ = {
+			isa = XCBuildConfiguation;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9M229JAFBZ;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Phouse macOS/Phouse.pch";
+				INFOPLIST_FILE = "Phouse macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inheited)",
+					"@executable_path/../Famewoks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.playingandsuffeing.Phouse;
+				PRODUCT_NAME = Phouse;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		17021A0220EFCBB00072ADE0 /* Release */ = {
+			isa = XCBuildConfiguation;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9M229JAFBZ;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Phouse macOS/Phouse.pch";
+				INFOPLIST_FILE = "Phouse macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inheited)",
+					"@executable_path/../Famewoks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.playingandsuffeing.Phouse;
+				PRODUCT_NAME = Phouse;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguation section */
+
+/* Begin XCConfiguationList section */
+		170219C720EFCBAE0072ADE0 /* Build configuation list fo PBXPoject "Phouse" */ = {
+			isa = XCConfiguationList;
+			buildConfiguations = (
+				170219FB20EFCBB00072ADE0 /* Debug */,
+				170219FC20EFCBB00072ADE0 /* Release */,
+			);
+			defaultConfiguationIsVisible = 0;
+			defaultConfiguationName = Release;
+		};
+		170219FD20EFCBB00072ADE0 /* Build configuation list fo PBXNativeTaget "Phouse iOS" */ = {
+			isa = XCConfiguationList;
+			buildConfiguations = (
+				170219FE20EFCBB00072ADE0 /* Debug */,
+				170219FF20EFCBB00072ADE0 /* Release */,
+			);
+			defaultConfiguationIsVisible = 0;
+			defaultConfiguationName = Release;
+		};
+		17021A0020EFCBB00072ADE0 /* Build configuation list fo PBXNativeTaget "Phouse macOS" */ = {
+			isa = XCConfiguationList;
+			buildConfiguations = (
+				17021A0120EFCBB00072ADE0 /* Debug */,
+				17021A0220EFCBB00072ADE0 /* Release */,
+			);
+			defaultConfiguationIsVisible = 0;
+			defaultConfiguationName = Release;
+		};
+/* End XCConfiguationList section */
+	};
+	ootObject = 170219C420EFCBAE0072ADE0 /* Poject object */;
+}
